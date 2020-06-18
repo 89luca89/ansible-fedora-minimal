@@ -136,11 +136,11 @@ codecs_packages:
       - libvdpau-va-gl
 
 process_prioritize:
-    - /usr/bin/mutter
-    - /usr/bin/gnome-shell
+      - /usr/bin/mutter
+      - /usr/bin/gnome-shell
 
 global_vars:
-    - export MOZ_USE_XINPUT2=1
-    - export MOZ_ACCELLERATED=1
-    - export MOZ_WEBRENDER=1
-    - export QT_QPA_PLATFORM=xcb
+      - export MOZ_USE_XINPUT2=1
+      - export MOZ_ACCELLERATED=1
+      - export MOZ_WEBRENDER=1
+      - export QT_QPA_PLATFORM=xcb
