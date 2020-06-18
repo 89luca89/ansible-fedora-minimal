@@ -1,0 +1,151 @@
+---
+# vars file
+#
+
+base_packages:
+      - "@base-x"
+      - ModemManager
+      - NetworkManager-adsl
+      - NetworkManager-bluetooth
+      - NetworkManager-config-connectivity-fedora
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-ppp
+      - NetworkManager-pptp-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-vpnc-gnome
+      - NetworkManager-wwan
+      - adwaita-gtk2-theme
+      - adwaita-qt4
+      - adwaita-qt5
+      - alsa-plugins-pulseaudio
+      - alsa-ucm
+      - alsa-utils
+      - atmel-firmware
+      - avahi
+      - b43-fwcutter
+      - b43-openfwwf
+      - baobab
+      - bluez-cups
+      - chrome-gnome-shell
+      - cups
+      - cups-filters
+      - dnsmasq
+      - earlyoom
+      - eog
+      - evince
+      - evince-djvu
+      - evince-nautilus
+      - file-roller
+      - file-roller-nautilus
+      - firefox
+      - foomatic
+      - foomatic-db-ppds
+      - fros-gnome
+      - geary
+      - gedit
+      - ghostscript
+      - git
+      - glibc-all-langpacks
+      - gnome-calculator
+      - gnome-color-manager
+      - gnome-disk-utility
+      - gnome-screenshot
+      - gnome-shell
+      - gnome-system-monitor
+      - gnome-terminal
+      - gnome-terminal-nautilus
+      - gnome-themes-extra
+      - gnome-tweak-tool
+      - gutenprint-cups
+      - gvfs-afc
+      - gvfs-afp
+      - gvfs-archive
+      - gvfs-goa
+      - gvfs-gphoto2
+      - gvfs-mtp
+      - gvfs-smb
+      - hplip
+      - iptables
+      - ipw2100-firmware
+      - ipw2200-firmware
+      - iwl100-firmware
+      - iwl1000-firmware
+      - iwl105-firmware
+      - iwl135-firmware
+      - iwl2000-firmware
+      - iwl2030-firmware
+      - iwl3160-firmware
+      - iwl3945-firmware
+      - iwl4965-firmware
+      - iwl5000-firmware
+      - iwl5150-firmware
+      - iwl6000-firmware
+      - iwl6000g2a-firmware
+      - iwl6000g2b-firmware
+      - iwl6050-firmware
+      - iwl7260-firmware
+      - libcanberra-gtk2
+      - libertas-usb8388-firmware
+      - libproxy-mozjs
+      - libreoffice-calc
+      - libreoffice-impress
+      - libreoffice-math
+      - libreoffice-writer
+      - libsane-hpaio
+      - mousetweaks
+      - nautilus
+      - nautilus-sendto
+      - pulseaudio-module-x11
+      - pulseaudio-utils
+      - qgnomeplatform
+      - qt-settings
+      - qt5-qtxmlpatterns
+      - rp-pppoe
+      - samba-client
+      - system-config-printer-udev
+      - usb_modeswitch
+      - xdg-user-dirs-gtk
+      - zd1211-firmware
+      - zram
+
+archive_packages:
+      - cabextract
+      - lzip
+      - p7zip
+      - p7zip-plugins
+
+codecs_packages:
+      - compat-ffmpeg28
+      - compat-ffmpeg28-devel
+      - ffmpeg
+      - ffmpeg-libs
+      - gstreamer1-libav
+      - gstreamer1-plugins-bad-free
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-base
+      - gstreamer1-plugins-base-tools
+      - gstreamer1-plugins-good
+      - gstreamer1-plugins-good-extras
+      - gstreamer1-plugins-ugly
+      - gstreamer1-plugins-ugly-free
+      - gstreamer1-svt-av1
+      - gstreamer1-svt-vp9
+      - gstreamer1-vaapi
+      - intel-media-driver
+      - libva-devel
+      - libva-intel-driver
+      - libva-intel-hybrid-driver
+      - libva-utils
+      - libva-vdpau-driver
+      - libvdpau-va-gl
+
+process_prioritize:
+    - /usr/bin/mutter
+    - /usr/bin/gnome-shell
+
+global_vars:
+    - export MOZ_USE_XINPUT2=1
+    - export MOZ_ACCELLERATED=1
+    - export MOZ_WEBRENDER=1
+    - export QT_QPA_PLATFORM=xcb

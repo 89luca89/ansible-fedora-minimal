@@ -1,0 +1,125 @@
+---
+# powersave
+#
+- name: Install Power Management (Laptop)
+  package:
+    state: latest
+    name:
+      - acpi
+      - hdparm
+      - lm_sensors
+      - msr-tools
+      - powertop
+      - tlp
+  become: true
+
+- name: Powertop Enable
+  systemd:
+    name: powertop.service
+    enabled: true
+    daemon_reload: true
+  become: true
+
+- name: TLP daemon enable
+  systemd:
+    name: tlp.service
+    state: started
+    enabled: true
+    daemon_reload: true
+  become: true
+
+- name: Set sysctl variables
+  sysctl:
+    name: '{{ item.name }}'
+    value: '{{ item.value }}'
+    sysctl_set: true
+    state: present
+    reload: true
+  with_items:
+    - {name: vm.laptop_mode, value: 5}
+    - {name: kernel.nmi_watchdog, value: 0}
+    - {name: vm.swappiness, value: 5}
+    - {name: vm.oom_kill_allocating_task, value: 1}
+    - {name: vm.block_dump, value: 1}
+    - {name: vm.vfs_cache_pressure, value: 100}
+    - {name: vm.dirty_ratio, value: 90}
+    - {name: vm.dirty_background_ratio, value: 50}
+    - {name: vm.dirty_writeback_centisecs, value: 60000}
+    - {name: vm.dirty_expire_centisecs, value: 60000}
+    - {name: fs.inotify.max_user_watches, value: 524288}
+  become: true
+
+- name: Blacklist unused kernel module
+  kernel_blacklist:
+    name: intel_powerclamp
+    state: present
+  become: true
+
+- name: Set i915 driver options
+  lineinfile:
+    path: /etc/modprobe.d/i915.conf
+    create: true
+    line: 'options i915 disable_power_well=0 enable_dc=2 enable_psr=1 enable_rc6=7 enable_fbc=1 powersave=1'
+  become: true
+
+- name: Set Intel HDA driver options
+  lineinfile:
+    path: /etc/modprobe.d/snd_hda_intel.conf
+    create: true
+    line: 'options snd_hda_intel power_save_controlle=Y power_save=1'
+  become: true
+
+- name: Set Intel ETH driver options
+  lineinfile:
+    path: /etc/modprobe.d/e1000e.conf
+    create: true
+    line: 'options e1000e SmartPowerDownEnable=1'
+  become: true
+
+- name: Set Intel Wifi driver options
+  lineinfile:
+    path: /etc/modprobe.d/iwlwifi.conf
+    create: true
+    line: 'options iwlwifi power_save=Y power_level=5 iwlmvm power_scheme=3'
+  become: true
+
+- name: Set UDev Rules
+  blockinfile:
+    path: /etc/udev/rules.d/powersave.rules
+    create: true
+    block: |
+      ACTION=="add", SUBSYSTEM=="pci", ATTR{power/control}="auto"
+      ACTION=="add", SUBSYSTEM=="ahci", ATTR{power/control}="auto"
+      ACTION=="add", SUBSYSTEM=="scsi_host", KERNEL=="host*", ATTR{link_power_management_policy}="min_power"
+      ACTION=="add", SUBSYSTEM=="scsi", ATTR{power/control}="auto"
+      ACTION=="add", SUBSYSTEM=="acpi", ATTR{power/control}="auto"
+      ACTION=="add", SUBSYSTEM=="block", ATTR{power/control}="auto"
+      ACTION=="add", SUBSYSTEM=="workqueue", ATTR{power/control}="auto"
+      ACTION=="add", SUBSYSTEM=="i2c", ATTR{power/control}="auto"
+      ACTION=="add", SUBSYSTEM=="net", KERNEL=="enp*", RUN+="/usr/sbin/ethtool -s %k wol d"
+      ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlp*", RUN+="/usr/sbin/ethtool -s %k wol d"
+      ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlp*", RUN+="/usr/sbin/iw dev %k set power_save on"
+      ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/read_ahead_kb}="65536"
+      ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="bfq"
+      ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/iosched/low_latency}="1"
+      ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"
+      ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/iosched/low_latency}="1"
+      ACTION=="add|change", KERNEL=="sd[a-z]", RUN+="/usr/sbin/hdparm -B 1 /dev/%k"
+  become: true
+
+- name: Deploy Grub Flags
+  replace:
+    path: /etc/default/grub
+    regexp: 'quiet"$'
+    replace: 'quiet nmi_watchdog=0 pcie_aspm.policy=powersupersave pcie_aspm=force drm.debug=0 drm.vblankoffdelay=1 scsi_mod.use_blk_mq=1 mmc_mod.use_blk_mq=1 noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off dis_ucode_ldr"'
+    backup: true
+  register: grub_setup
+  become: true
+
+- name: Update Grub and Initramfs
+  command: '{{ item }}'
+  with_items:
+    - 'grub2-mkconfig -o /boot/grub2/grub.cfg'
+    - 'dracut --force --regenerate-all -v'
+  when: grub_setup.changed
+  become: true

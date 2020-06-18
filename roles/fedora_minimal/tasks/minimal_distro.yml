@@ -1,0 +1,53 @@
+---
+# Create base distro from minimal fedora netinstall
+#
+
+- name: Install base distro
+  dnf:
+    name: "{{ base_packages }}"
+  become: true
+  tags: base_packages
+
+- name: zRam Swap Enable
+  systemd:
+    name: zram-swap
+    state: started
+    enabled: true
+    daemon_reload: true
+  become: true
+  tags: base_packages
+
+- name: Set graphical target
+  command: |
+    systemctl set-default graphical.target
+  become: true
+  tags: base_packages
+
+- name: Install the rpmfusion and fonts repo packages
+  dnf:
+    state: present
+    name:
+      - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_facts.distribution_version }}.noarch.rpm
+      - http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_facts.distribution_version }}.noarch.rpm
+  become: true
+  tags: rpmfusion
+
+- name: Install Programs (Archive Utilities)
+  package:
+    state: latest
+    name: "{{ archive_packages }}"
+  become: true
+  tags: zip
+
+- name: Install Programs (Media Utilities)
+  package:
+    state: latest
+    name: "{{ codecs_packages }}"
+  become: true
+  tags: codecs
+
+  ############################# REBOOT #######################################
+
+- name: Base distro ready, reboot and continue
+  reboot:
+  become: true

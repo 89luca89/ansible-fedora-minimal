@@ -1,0 +1,48 @@
+---
+# tweaks
+#
+
+- name: Update fstab file with tmpfs /tmp
+  lineinfile:
+    path: /etc/fstab
+    regexp: tmpfs /tmp tmpfs
+    line: tmpfs /tmp tmpfs defaults,lazytime,noatime,nodiratime 0 0
+    state: present
+    backup: true
+  become: true
+
+- name: Discard Trim Enable
+  systemd:
+    name: fstrim.timer
+    state: started
+    enabled: true
+    daemon_reload: true
+  become: true
+
+- name: Load IO Schedulers at boot
+  blockinfile:
+    path: /etc/modules-load.d/iosched.conf
+    create: true
+    block: |
+      bfq
+      mq-deadline
+      kyber-iosched
+  become: true
+
+- name: Responsiveness process performance-tweaks
+  capabilities:
+    path: "{{ item }}"
+    capability: cap_sys_nice=+ep
+    state: present
+  with_items: "{{ process_prioritize }}"
+  become: true
+
+- name: Update the profiles file with personal variables
+  lineinfile:
+    path: /etc/profile
+    regexp: '{{ item }}'
+    line: '{{ item }}'
+    state: present
+    backup: true
+  with_items: "{{ global_vars }}"
+  become: true

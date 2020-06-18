@@ -1,0 +1,224 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+# Author	main.yml	/^# Author: Luca Di Maio$/;"	k	line:3	language:YAML
+# Creation Date	main.yml	/^# Creation Date: 2019-06-17$/;"	k	line:1	language:YAML
+# file	main.yml	/^# file: main.yml$/;"	k	line:6	language:YAML
+- hosts	main.yml	/^- hosts: all$/;"	k	line:8	language:YAML
+- http	roles/fedora_minimal/tasks/minimal_distro.yml	/^      - http:\/\/download1.rpmfusion.org\/free\/fedora\/rpmfusion-free-release-{{ ansible_facts.distribution_version }}.noarch.rpm$/;"	k	line:30	language:YAML
+- http	roles/fedora_minimal/tasks/minimal_distro.yml	/^      - http:\/\/download1.rpmfusion.org\/nonfree\/fedora\/rpmfusion-nonfree-release-{{ ansible_facts.distribution_version }}.noarch.rpm$/;"	k	line:31	language:YAML
+- include_role	main.yml	/^  - include_role:$/;"	k	line:13	language:YAML
+- name	roles/fedora_minimal/tasks/main.yml	/^- name: Build up base distro$/;"	k	line:11	language:YAML
+- name	roles/fedora_minimal/tasks/main.yml	/^- name: Performance Tweaks$/;"	k	line:15	language:YAML
+- name	roles/fedora_minimal/tasks/main.yml	/^- name: Powersaving Tweaks$/;"	k	line:19	language:YAML
+- name	roles/fedora_minimal/tasks/main.yml	/^- name: Update packages$/;"	k	line:5	language:YAML
+- name	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Base distro ready, reboot and continue$/;"	k	line:51	language:YAML
+- name	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install Programs (Archive Utilities)$/;"	k	line:35	language:YAML
+- name	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install Programs (Media Utilities)$/;"	k	line:42	language:YAML
+- name	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install base distro$/;"	k	line:5	language:YAML
+- name	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install the rpmfusion and fonts repo packages$/;"	k	line:26	language:YAML
+- name	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Set graphical target$/;"	k	line:20	language:YAML
+- name	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: zRam Swap Enable$/;"	k	line:11	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Blacklist unused kernel module$/;"	k	line:52	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Deploy Grub Flags$/;"	k	line:110	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Install Power Management (Laptop)$/;"	k	line:4	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Powertop Enable$/;"	k	line:16	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set Intel ETH driver options$/;"	k	line:72	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set Intel HDA driver options$/;"	k	line:65	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set Intel Wifi driver options$/;"	k	line:79	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set UDev Rules$/;"	k	line:86	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set i915 driver options$/;"	k	line:58	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set sysctl variables$/;"	k	line:31	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: TLP daemon enable$/;"	k	line:23	language:YAML
+- name	roles/fedora_minimal/tasks/powersave.yml	/^- name: Update Grub and Initramfs$/;"	k	line:119	language:YAML
+- name	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Discard Trim Enable$/;"	k	line:14	language:YAML
+- name	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Load IO Schedulers at boot$/;"	k	line:22	language:YAML
+- name	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Responsiveness process performance-tweaks$/;"	k	line:32	language:YAML
+- name	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Update fstab file with tmpfs \/tmp$/;"	k	line:5	language:YAML
+- name	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Update the profiles file with personal variables$/;"	k	line:40	language:YAML
+- {name: fs.inotify.max_user_watches, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: fs.inotify.max_user_watches, value: 524288}$/;"	k	line:49	language:YAML
+- {name: kernel.nmi_watchdog, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: kernel.nmi_watchdog, value: 0}$/;"	k	line:40	language:YAML
+- {name: vm.block_dump, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.block_dump, value: 1}$/;"	k	line:43	language:YAML
+- {name: vm.dirty_background_ratio, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.dirty_background_ratio, value: 50}$/;"	k	line:46	language:YAML
+- {name: vm.dirty_expire_centisecs, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.dirty_expire_centisecs, value: 60000}$/;"	k	line:48	language:YAML
+- {name: vm.dirty_ratio, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.dirty_ratio, value: 90}$/;"	k	line:45	language:YAML
+- {name: vm.dirty_writeback_centisecs, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.dirty_writeback_centisecs, value: 60000}$/;"	k	line:47	language:YAML
+- {name: vm.laptop_mode, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.laptop_mode, value: 5}$/;"	k	line:39	language:YAML
+- {name: vm.oom_kill_allocating_task, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.oom_kill_allocating_task, value: 1}$/;"	k	line:42	language:YAML
+- {name: vm.swappiness, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.swappiness, value: 5}$/;"	k	line:41	language:YAML
+- {name: vm.vfs_cache_pressure, value	roles/fedora_minimal/tasks/powersave.yml	/^    - {name: vm.vfs_cache_pressure, value: 100}$/;"	k	line:44	language:YAML
+Base distro ready, reboot and continue	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Base distro ready, reboot and continue$/;"	k	line:51	language:YAML
+Blacklist unused kernel module	roles/fedora_minimal/tasks/powersave.yml	/^- name: Blacklist unused kernel module$/;"	k	line:52	language:YAML
+Build up base distro	roles/fedora_minimal/tasks/main.yml	/^- name: Build up base distro$/;"	k	line:11	language:YAML
+Deploy Grub Flags	roles/fedora_minimal/tasks/powersave.yml	/^- name: Deploy Grub Flags$/;"	k	line:110	language:YAML
+Discard Trim Enable	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Discard Trim Enable$/;"	k	line:14	language:YAML
+Install Power Management (Laptop)	roles/fedora_minimal/tasks/powersave.yml	/^- name: Install Power Management (Laptop)$/;"	k	line:4	language:YAML
+Install Programs (Archive Utilities)	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install Programs (Archive Utilities)$/;"	k	line:35	language:YAML
+Install Programs (Media Utilities)	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install Programs (Media Utilities)$/;"	k	line:42	language:YAML
+Install base distro	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install base distro$/;"	k	line:5	language:YAML
+Install the rpmfusion and fonts repo packages	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Install the rpmfusion and fonts repo packages$/;"	k	line:26	language:YAML
+Load IO Schedulers at boot	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Load IO Schedulers at boot$/;"	k	line:22	language:YAML
+Performance Tweaks	roles/fedora_minimal/tasks/main.yml	/^- name: Performance Tweaks$/;"	k	line:15	language:YAML
+Powersaving Tweaks	roles/fedora_minimal/tasks/main.yml	/^- name: Powersaving Tweaks$/;"	k	line:19	language:YAML
+Powertop Enable	roles/fedora_minimal/tasks/powersave.yml	/^- name: Powertop Enable$/;"	k	line:16	language:YAML
+Responsiveness process performance-tweaks	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Responsiveness process performance-tweaks$/;"	k	line:32	language:YAML
+Set Intel ETH driver options	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set Intel ETH driver options$/;"	k	line:72	language:YAML
+Set Intel HDA driver options	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set Intel HDA driver options$/;"	k	line:65	language:YAML
+Set Intel Wifi driver options	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set Intel Wifi driver options$/;"	k	line:79	language:YAML
+Set UDev Rules	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set UDev Rules$/;"	k	line:86	language:YAML
+Set graphical target	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: Set graphical target$/;"	k	line:20	language:YAML
+Set i915 driver options	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set i915 driver options$/;"	k	line:58	language:YAML
+Set sysctl variables	roles/fedora_minimal/tasks/powersave.yml	/^- name: Set sysctl variables$/;"	k	line:31	language:YAML
+TLP daemon enable	roles/fedora_minimal/tasks/powersave.yml	/^- name: TLP daemon enable$/;"	k	line:23	language:YAML
+Update Grub and Initramfs	roles/fedora_minimal/tasks/powersave.yml	/^- name: Update Grub and Initramfs$/;"	k	line:119	language:YAML
+Update fstab file with tmpfs /tmp	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Update fstab file with tmpfs \/tmp$/;"	k	line:5	language:YAML
+Update packages	roles/fedora_minimal/tasks/main.yml	/^- name: Update packages$/;"	k	line:5	language:YAML
+Update the profiles file with personal variables	roles/fedora_minimal/tasks/system_tweaks.yml	/^- name: Update the profiles file with personal variables$/;"	k	line:40	language:YAML
+archive_packages	roles/fedora_minimal/vars/main.yml	/^archive_packages:$/;"	k	line:112	language:YAML
+backup	roles/fedora_minimal/tasks/powersave.yml	/^    backup: true$/;"	k	line:115	language:YAML
+backup	roles/fedora_minimal/tasks/system_tweaks.yml	/^    backup: true$/;"	k	line:11	language:YAML
+backup	roles/fedora_minimal/tasks/system_tweaks.yml	/^    backup: true$/;"	k	line:46	language:YAML
+base_packages	roles/fedora_minimal/vars/main.yml	/^base_packages:$/;"	k	line:5	language:YAML
+become	roles/fedora_minimal/tasks/main.yml	/^  become: true$/;"	k	line:8	language:YAML
+become	roles/fedora_minimal/tasks/minimal_distro.yml	/^  become: true$/;"	k	line:17	language:YAML
+become	roles/fedora_minimal/tasks/minimal_distro.yml	/^  become: true$/;"	k	line:23	language:YAML
+become	roles/fedora_minimal/tasks/minimal_distro.yml	/^  become: true$/;"	k	line:32	language:YAML
+become	roles/fedora_minimal/tasks/minimal_distro.yml	/^  become: true$/;"	k	line:39	language:YAML
+become	roles/fedora_minimal/tasks/minimal_distro.yml	/^  become: true$/;"	k	line:46	language:YAML
+become	roles/fedora_minimal/tasks/minimal_distro.yml	/^  become: true$/;"	k	line:53	language:YAML
+become	roles/fedora_minimal/tasks/minimal_distro.yml	/^  become: true$/;"	k	line:8	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:108	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:117	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:125	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:14	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:21	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:29	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:50	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:56	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:63	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:70	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:77	language:YAML
+become	roles/fedora_minimal/tasks/powersave.yml	/^  become: true$/;"	k	line:84	language:YAML
+become	roles/fedora_minimal/tasks/system_tweaks.yml	/^  become: true$/;"	k	line:12	language:YAML
+become	roles/fedora_minimal/tasks/system_tweaks.yml	/^  become: true$/;"	k	line:20	language:YAML
+become	roles/fedora_minimal/tasks/system_tweaks.yml	/^  become: true$/;"	k	line:30	language:YAML
+become	roles/fedora_minimal/tasks/system_tweaks.yml	/^  become: true$/;"	k	line:38	language:YAML
+become	roles/fedora_minimal/tasks/system_tweaks.yml	/^  become: true$/;"	k	line:48	language:YAML
+block	roles/fedora_minimal/tasks/powersave.yml	/^    block: |$/;"	k	line:90	language:YAML
+block	roles/fedora_minimal/tasks/system_tweaks.yml	/^    block: |$/;"	k	line:26	language:YAML
+blockinfile	roles/fedora_minimal/tasks/powersave.yml	/^  blockinfile:$/;"	k	line:87	language:YAML
+blockinfile	roles/fedora_minimal/tasks/system_tweaks.yml	/^  blockinfile:$/;"	k	line:23	language:YAML
+capabilities	roles/fedora_minimal/tasks/system_tweaks.yml	/^  capabilities:$/;"	k	line:33	language:YAML
+capability	roles/fedora_minimal/tasks/system_tweaks.yml	/^    capability: cap_sys_nice=+ep$/;"	k	line:35	language:YAML
+codecs_packages	roles/fedora_minimal/vars/main.yml	/^codecs_packages:$/;"	k	line:118	language:YAML
+command	roles/fedora_minimal/tasks/main.yml	/^  command: |$/;"	k	line:6	language:YAML
+command	roles/fedora_minimal/tasks/minimal_distro.yml	/^  command: |$/;"	k	line:21	language:YAML
+command	roles/fedora_minimal/tasks/powersave.yml	/^  command: '{{ item }}'$/;"	k	line:120	language:YAML
+create	roles/fedora_minimal/tasks/powersave.yml	/^    create: true$/;"	k	line:61	language:YAML
+create	roles/fedora_minimal/tasks/powersave.yml	/^    create: true$/;"	k	line:68	language:YAML
+create	roles/fedora_minimal/tasks/powersave.yml	/^    create: true$/;"	k	line:75	language:YAML
+create	roles/fedora_minimal/tasks/powersave.yml	/^    create: true$/;"	k	line:82	language:YAML
+create	roles/fedora_minimal/tasks/powersave.yml	/^    create: true$/;"	k	line:89	language:YAML
+create	roles/fedora_minimal/tasks/system_tweaks.yml	/^    create: true$/;"	k	line:25	language:YAML
+daemon_reload	roles/fedora_minimal/tasks/minimal_distro.yml	/^    daemon_reload: true$/;"	k	line:16	language:YAML
+daemon_reload	roles/fedora_minimal/tasks/powersave.yml	/^    daemon_reload: true$/;"	k	line:20	language:YAML
+daemon_reload	roles/fedora_minimal/tasks/powersave.yml	/^    daemon_reload: true$/;"	k	line:28	language:YAML
+daemon_reload	roles/fedora_minimal/tasks/system_tweaks.yml	/^    daemon_reload: true$/;"	k	line:19	language:YAML
+dnf	roles/fedora_minimal/tasks/minimal_distro.yml	/^  dnf:$/;"	k	line:27	language:YAML
+dnf	roles/fedora_minimal/tasks/minimal_distro.yml	/^  dnf:$/;"	k	line:6	language:YAML
+enabled	roles/fedora_minimal/tasks/minimal_distro.yml	/^    enabled: true$/;"	k	line:15	language:YAML
+enabled	roles/fedora_minimal/tasks/powersave.yml	/^    enabled: true$/;"	k	line:19	language:YAML
+enabled	roles/fedora_minimal/tasks/powersave.yml	/^    enabled: true$/;"	k	line:27	language:YAML
+enabled	roles/fedora_minimal/tasks/system_tweaks.yml	/^    enabled: true$/;"	k	line:18	language:YAML
+gather_facts	main.yml	/^  gather_facts: True$/;"	k	line:9	language:YAML
+global_vars	roles/fedora_minimal/vars/main.yml	/^global_vars:$/;"	k	line:147	language:YAML
+include	roles/fedora_minimal/tasks/main.yml	/^  include: minimal_distro.yml$/;"	k	line:12	language:YAML
+include	roles/fedora_minimal/tasks/main.yml	/^  include: powersave.yml$/;"	k	line:20	language:YAML
+include	roles/fedora_minimal/tasks/main.yml	/^  include: system_tweaks.yml$/;"	k	line:16	language:YAML
+kernel_blacklist	roles/fedora_minimal/tasks/powersave.yml	/^  kernel_blacklist:$/;"	k	line:53	language:YAML
+line	roles/fedora_minimal/tasks/powersave.yml	/^    line: 'options e1000e SmartPowerDownEnable=1'$/;"	k	line:76	language:YAML
+line	roles/fedora_minimal/tasks/powersave.yml	/^    line: 'options i915 disable_power_well=0 enable_dc=2 enable_psr=1 enable_rc6=7 enable_fbc=1 powersave=1'$/;"	k	line:62	language:YAML
+line	roles/fedora_minimal/tasks/powersave.yml	/^    line: 'options iwlwifi power_save=Y power_level=5 iwlmvm power_scheme=3'$/;"	k	line:83	language:YAML
+line	roles/fedora_minimal/tasks/powersave.yml	/^    line: 'options snd_hda_intel power_save_controlle=Y power_save=1'$/;"	k	line:69	language:YAML
+line	roles/fedora_minimal/tasks/system_tweaks.yml	/^    line: '{{ item }}'$/;"	k	line:44	language:YAML
+line	roles/fedora_minimal/tasks/system_tweaks.yml	/^    line: tmpfs \/tmp tmpfs defaults,lazytime,noatime,nodiratime 0 0$/;"	k	line:9	language:YAML
+lineinfile	roles/fedora_minimal/tasks/powersave.yml	/^  lineinfile:$/;"	k	line:59	language:YAML
+lineinfile	roles/fedora_minimal/tasks/powersave.yml	/^  lineinfile:$/;"	k	line:66	language:YAML
+lineinfile	roles/fedora_minimal/tasks/powersave.yml	/^  lineinfile:$/;"	k	line:73	language:YAML
+lineinfile	roles/fedora_minimal/tasks/powersave.yml	/^  lineinfile:$/;"	k	line:80	language:YAML
+lineinfile	roles/fedora_minimal/tasks/system_tweaks.yml	/^  lineinfile:$/;"	k	line:41	language:YAML
+lineinfile	roles/fedora_minimal/tasks/system_tweaks.yml	/^  lineinfile:$/;"	k	line:6	language:YAML
+name	main.yml	/^      name: fedora_minimal$/;"	k	line:14	language:YAML
+name	roles/fedora_minimal/tasks/minimal_distro.yml	/^    name: "{{ archive_packages }}"$/;"	k	line:38	language:YAML
+name	roles/fedora_minimal/tasks/minimal_distro.yml	/^    name: "{{ base_packages }}"$/;"	k	line:7	language:YAML
+name	roles/fedora_minimal/tasks/minimal_distro.yml	/^    name: "{{ codecs_packages }}"$/;"	k	line:45	language:YAML
+name	roles/fedora_minimal/tasks/minimal_distro.yml	/^    name: zram-swap$/;"	k	line:13	language:YAML
+name	roles/fedora_minimal/tasks/minimal_distro.yml	/^    name:$/;"	k	line:29	language:YAML
+name	roles/fedora_minimal/tasks/powersave.yml	/^    name: '{{ item.name }}'$/;"	k	line:33	language:YAML
+name	roles/fedora_minimal/tasks/powersave.yml	/^    name: intel_powerclamp$/;"	k	line:54	language:YAML
+name	roles/fedora_minimal/tasks/powersave.yml	/^    name: powertop.service$/;"	k	line:18	language:YAML
+name	roles/fedora_minimal/tasks/powersave.yml	/^    name: tlp.service$/;"	k	line:25	language:YAML
+name	roles/fedora_minimal/tasks/powersave.yml	/^    name:$/;"	k	line:7	language:YAML
+name	roles/fedora_minimal/tasks/system_tweaks.yml	/^    name: fstrim.timer$/;"	k	line:16	language:YAML
+package	roles/fedora_minimal/tasks/minimal_distro.yml	/^  package:$/;"	k	line:36	language:YAML
+package	roles/fedora_minimal/tasks/minimal_distro.yml	/^  package:$/;"	k	line:43	language:YAML
+package	roles/fedora_minimal/tasks/powersave.yml	/^  package:$/;"	k	line:5	language:YAML
+path	roles/fedora_minimal/tasks/powersave.yml	/^    path: \/etc\/default\/grub$/;"	k	line:112	language:YAML
+path	roles/fedora_minimal/tasks/powersave.yml	/^    path: \/etc\/modprobe.d\/e1000e.conf$/;"	k	line:74	language:YAML
+path	roles/fedora_minimal/tasks/powersave.yml	/^    path: \/etc\/modprobe.d\/i915.conf$/;"	k	line:60	language:YAML
+path	roles/fedora_minimal/tasks/powersave.yml	/^    path: \/etc\/modprobe.d\/iwlwifi.conf$/;"	k	line:81	language:YAML
+path	roles/fedora_minimal/tasks/powersave.yml	/^    path: \/etc\/modprobe.d\/snd_hda_intel.conf$/;"	k	line:67	language:YAML
+path	roles/fedora_minimal/tasks/powersave.yml	/^    path: \/etc\/udev\/rules.d\/powersave.rules$/;"	k	line:88	language:YAML
+path	roles/fedora_minimal/tasks/system_tweaks.yml	/^    path: "{{ item }}"$/;"	k	line:34	language:YAML
+path	roles/fedora_minimal/tasks/system_tweaks.yml	/^    path: \/etc\/fstab$/;"	k	line:7	language:YAML
+path	roles/fedora_minimal/tasks/system_tweaks.yml	/^    path: \/etc\/modules-load.d\/iosched.conf$/;"	k	line:24	language:YAML
+path	roles/fedora_minimal/tasks/system_tweaks.yml	/^    path: \/etc\/profile$/;"	k	line:42	language:YAML
+process_prioritize	roles/fedora_minimal/vars/main.yml	/^process_prioritize:$/;"	k	line:143	language:YAML
+reboot	roles/fedora_minimal/tasks/minimal_distro.yml	/^  reboot:$/;"	k	line:52	language:YAML
+regexp	roles/fedora_minimal/tasks/powersave.yml	/^    regexp: 'quiet"$'$/;"	k	line:113	language:YAML
+regexp	roles/fedora_minimal/tasks/system_tweaks.yml	/^    regexp: '{{ item }}'$/;"	k	line:43	language:YAML
+regexp	roles/fedora_minimal/tasks/system_tweaks.yml	/^    regexp: tmpfs \/tmp tmpfs$/;"	k	line:8	language:YAML
+register	roles/fedora_minimal/tasks/powersave.yml	/^  register: grub_setup$/;"	k	line:116	language:YAML
+reload	roles/fedora_minimal/tasks/powersave.yml	/^    reload: true$/;"	k	line:37	language:YAML
+replace	roles/fedora_minimal/tasks/powersave.yml	/^    replace: 'quiet nmi_watchdog=0 pcie_aspm.policy=powersupersave pcie_aspm=force drm.debug=0 drm.vblankoffdelay=1 scsi_mod.use_blk_mq=1 mmc_mod.use_blk_mq=1 noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off dis_ucode_ldr"'$/;"	k	line:114	language:YAML
+replace	roles/fedora_minimal/tasks/powersave.yml	/^  replace:$/;"	k	line:111	language:YAML
+state	roles/fedora_minimal/tasks/minimal_distro.yml	/^    state: latest$/;"	k	line:37	language:YAML
+state	roles/fedora_minimal/tasks/minimal_distro.yml	/^    state: latest$/;"	k	line:44	language:YAML
+state	roles/fedora_minimal/tasks/minimal_distro.yml	/^    state: present$/;"	k	line:28	language:YAML
+state	roles/fedora_minimal/tasks/minimal_distro.yml	/^    state: started$/;"	k	line:14	language:YAML
+state	roles/fedora_minimal/tasks/powersave.yml	/^    state: latest$/;"	k	line:6	language:YAML
+state	roles/fedora_minimal/tasks/powersave.yml	/^    state: present$/;"	k	line:36	language:YAML
+state	roles/fedora_minimal/tasks/powersave.yml	/^    state: present$/;"	k	line:55	language:YAML
+state	roles/fedora_minimal/tasks/powersave.yml	/^    state: started$/;"	k	line:26	language:YAML
+state	roles/fedora_minimal/tasks/system_tweaks.yml	/^    state: present$/;"	k	line:10	language:YAML
+state	roles/fedora_minimal/tasks/system_tweaks.yml	/^    state: present$/;"	k	line:36	language:YAML
+state	roles/fedora_minimal/tasks/system_tweaks.yml	/^    state: present$/;"	k	line:45	language:YAML
+state	roles/fedora_minimal/tasks/system_tweaks.yml	/^    state: started$/;"	k	line:17	language:YAML
+sysctl	roles/fedora_minimal/tasks/powersave.yml	/^  sysctl:$/;"	k	line:32	language:YAML
+sysctl_set	roles/fedora_minimal/tasks/powersave.yml	/^    sysctl_set: true$/;"	k	line:35	language:YAML
+systemd	roles/fedora_minimal/tasks/minimal_distro.yml	/^  systemd:$/;"	k	line:12	language:YAML
+systemd	roles/fedora_minimal/tasks/powersave.yml	/^  systemd:$/;"	k	line:17	language:YAML
+systemd	roles/fedora_minimal/tasks/powersave.yml	/^  systemd:$/;"	k	line:24	language:YAML
+systemd	roles/fedora_minimal/tasks/system_tweaks.yml	/^  systemd:$/;"	k	line:15	language:YAML
+tags	main.yml	/^    tags: base_distro, system_tweaks, powersave$/;"	k	line:15	language:YAML
+tags	roles/fedora_minimal/tasks/main.yml	/^  tags: base_distro$/;"	k	line:13	language:YAML
+tags	roles/fedora_minimal/tasks/main.yml	/^  tags: base_distro$/;"	k	line:9	language:YAML
+tags	roles/fedora_minimal/tasks/main.yml	/^  tags: powersave$/;"	k	line:21	language:YAML
+tags	roles/fedora_minimal/tasks/main.yml	/^  tags: system_tweaks$/;"	k	line:17	language:YAML
+tags	roles/fedora_minimal/tasks/minimal_distro.yml	/^  tags: base_packages$/;"	k	line:18	language:YAML
+tags	roles/fedora_minimal/tasks/minimal_distro.yml	/^  tags: base_packages$/;"	k	line:24	language:YAML
+tags	roles/fedora_minimal/tasks/minimal_distro.yml	/^  tags: base_packages$/;"	k	line:9	language:YAML
+tags	roles/fedora_minimal/tasks/minimal_distro.yml	/^  tags: codecs$/;"	k	line:47	language:YAML
+tags	roles/fedora_minimal/tasks/minimal_distro.yml	/^  tags: rpmfusion$/;"	k	line:33	language:YAML
+tags	roles/fedora_minimal/tasks/minimal_distro.yml	/^  tags: zip$/;"	k	line:40	language:YAML
+tasks	main.yml	/^  tasks:$/;"	k	line:10	language:YAML
+value	roles/fedora_minimal/tasks/powersave.yml	/^    value: '{{ item.value }}'$/;"	k	line:34	language:YAML
+when	roles/fedora_minimal/tasks/powersave.yml	/^  when: grub_setup.changed$/;"	k	line:124	language:YAML
+with_items	roles/fedora_minimal/tasks/powersave.yml	/^  with_items:$/;"	k	line:121	language:YAML
+with_items	roles/fedora_minimal/tasks/powersave.yml	/^  with_items:$/;"	k	line:38	language:YAML
+with_items	roles/fedora_minimal/tasks/system_tweaks.yml	/^  with_items: "{{ global_vars }}"$/;"	k	line:47	language:YAML
+with_items	roles/fedora_minimal/tasks/system_tweaks.yml	/^  with_items: "{{ process_prioritize }}"$/;"	k	line:37	language:YAML
+zRam Swap Enable	roles/fedora_minimal/tasks/minimal_distro.yml	/^- name: zRam Swap Enable$/;"	k	line:11	language:YAML
