@@ -15,6 +15,7 @@ base_packages:
       - NetworkManager-ssh-gnome
       - NetworkManager-vpnc-gnome
       - NetworkManager-wwan
+      - NetworkManager-wifi
       - adwaita-gtk2-theme
       - adwaita-qt4
       - adwaita-qt5
