@@ -42,7 +42,6 @@ base_packages:
       - foomatic
       - foomatic-db-ppds
       - fros-gnome
-      - geary
       - gedit
       - ghostscript
       - git
@@ -88,10 +87,6 @@ base_packages:
       - libcanberra-gtk2
       - libertas-usb8388-firmware
       - libproxy-mozjs
-      - libreoffice-calc
-      - libreoffice-impress
-      - libreoffice-math
-      - libreoffice-writer
       - libsane-hpaio
       - mousetweaks
       - nautilus
