@@ -130,3 +130,4 @@
   reboot:
   when: grub_setup.changed
   become: true
+  tags: reboot
