@@ -110,6 +110,7 @@ archive_packages:
       - lzip
       - p7zip
       - p7zip-plugins
+      - unzip
 
 codecs_packages:
       - compat-ffmpeg28
