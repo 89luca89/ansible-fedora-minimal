@@ -4,6 +4,10 @@
 
 base_packages:
       - "@base-x"
+      - "@core"
+      - "@firefox"
+      - "@fonts"
+      - "@hardware-support"
       - "@networkmanager-submodules"
       - "@printing"
       - ModemManager
@@ -34,7 +38,6 @@ base_packages:
       - evince-nautilus
       - file-roller
       - file-roller-nautilus
-      - firefox
       - fros-gnome
       - gedit
       - git
