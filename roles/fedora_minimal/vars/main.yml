@@ -4,9 +4,10 @@
 
 base_packages:
       - "@base-x"
+      - "@networkmanager-submodules"
+      - "@printing"
       - ModemManager
       - NetworkManager-adsl
-      - NetworkManager-bluetooth
       - NetworkManager-config-connectivity-fedora
       - NetworkManager-openconnect-gnome
       - NetworkManager-openvpn-gnome
@@ -14,8 +15,6 @@ base_packages:
       - NetworkManager-pptp-gnome
       - NetworkManager-ssh-gnome
       - NetworkManager-vpnc-gnome
-      - NetworkManager-wwan
-      - NetworkManager-wifi
       - adwaita-gtk2-theme
       - adwaita-qt4
       - adwaita-qt5
@@ -27,11 +26,7 @@ base_packages:
       - b43-fwcutter
       - b43-openfwwf
       - baobab
-      - bluez-cups
       - chrome-gnome-shell
-      - cups
-      - cups-filters
-      - dnsmasq
       - earlyoom
       - eog
       - evince
@@ -40,11 +35,8 @@ base_packages:
       - file-roller
       - file-roller-nautilus
       - firefox
-      - foomatic
-      - foomatic-db-ppds
       - fros-gnome
       - gedit
-      - ghostscript
       - git
       - glibc-all-langpacks
       - gnome-calculator
@@ -57,7 +49,6 @@ base_packages:
       - gnome-terminal-nautilus
       - gnome-themes-extra
       - gnome-tweak-tool
-      - gutenprint-cups
       - gvfs-afc
       - gvfs-afp
       - gvfs-archive
@@ -65,8 +56,6 @@ base_packages:
       - gvfs-gphoto2
       - gvfs-mtp
       - gvfs-smb
-      - hplip
-      - iptables
       - ipw2100-firmware
       - ipw2200-firmware
       - iwl100-firmware
@@ -98,8 +87,6 @@ base_packages:
       - qt-settings
       - qt5-qtxmlpatterns
       - rp-pppoe
-      - samba-client
-      - system-config-printer-udev
       - usb_modeswitch
       - xdg-user-dirs-gtk
       - zd1211-firmware
