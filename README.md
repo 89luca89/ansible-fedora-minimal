@@ -67,3 +67,10 @@ After install:
 - `rpm -qa | wc -l` yelds **1248** packages for gnome, **1375** for kde
 - 111 process after boot (gnome), 87 process after boot (kde)
 - about 600~650mb of ram occupied after boot (both gnome and kde)
+
+To be noted:
+
+With a minimal install both KDE and GNOME ram consumption is absolutely comparable, if measured with the same
+tool ( `htop` )
+If we measure with `gnome-system-monitor` it reports a higher RAM usage for gnome and at the same time,
+`ksysguard` reports much lower RAM usage for KDE, both compared to `htop`. 
