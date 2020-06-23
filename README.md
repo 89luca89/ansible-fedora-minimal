@@ -29,6 +29,8 @@ Available tags are:
 
 - base_distro
   - `base_distro`   will install all basic packages  
+- kde (optional)
+- gnome (optional)
 - system_tweaks (optional)
   - `system_tweaks` will tweak the system for performance  **This has to be explicitely specified to be run**
 - powersave (optional)
@@ -46,6 +48,8 @@ More atomic tags are available:
 - codecs
 - zip
 - rpmfusion
+- gnome
+- kde
 
 Those will only run the specific task ie. for installing only codecs and rpmfusion, etc.
 
@@ -55,9 +59,11 @@ Those will only run the specific task ie. for installing only codecs and rpmfusi
 
 ![overview](./pics/overview.png)
 ![htop](./pics/htop.png)
+![kde-overview](./pics/kde-overview.png)
+![kde-htop](./pics/kde-htop.png)
 
 After install:
 
-- `rpm -qa | wc -l` yelds **1248** packages
-- 220 process after boot
-- about 600~650mb of ram occupied after boot
+- `rpm -qa | wc -l` yelds **1248** packages for gnome, **1375** for kde
+- 111 process after boot (gnome), 87 process after boot (kde)
+- about 600~650mb of ram occupied after boot (both gnome and kde)
