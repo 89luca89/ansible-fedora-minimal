@@ -19,3 +19,22 @@
 - name: Powersaving Tweaks
   include: powersave.yml
   tags: never, powersave
+
+- name: Install gnome packages
+  dnf:
+    name: "{{ gnome_packages }}"
+  become: true
+  tags: never,gnome
+
+- name: Install kde packages
+  dnf:
+    name: "{{ kde_packages }}"
+  become: true
+  tags: never,kde
+
+  ############################# REBOOT #######################################
+
+- name: Base distro ready, reboot and continue
+  reboot:
+  become: true
+  tags: reboot

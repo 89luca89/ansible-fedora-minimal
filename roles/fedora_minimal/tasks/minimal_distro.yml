@@ -45,10 +45,3 @@
     name: "{{ codecs_packages }}"
   become: true
   tags: codecs
-
-  ############################# REBOOT #######################################
-
-- name: Base distro ready, reboot and continue
-  reboot:
-  become: true
-  tags: reboot

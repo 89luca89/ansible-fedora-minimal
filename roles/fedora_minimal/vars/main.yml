@@ -14,21 +14,31 @@ base_packages:
       - NetworkManager-adsl
       - NetworkManager-config-connectivity-fedora
       - NetworkManager-ppp
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openvpn-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-ssh-gnome
-      - NetworkManager-vpnc-gnome
       - adwaita-gtk2-theme
       - adwaita-qt4
       - adwaita-qt5
       - alsa-plugins-pulseaudio
       - alsa-ucm
       - alsa-utils
+      - earlyoom
+      - git
+      - glibc-all-langpacks
+      - libsane-hpaio
+      - pulseaudio-module-x11
+      - pulseaudio-utils
+      - rp-pppoe
+      - usb_modeswitch
+      - zram
+
+gnome_packages:
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-vpnc-gnome
       - avahi
       - baobab
       - chrome-gnome-shell
-      - earlyoom
       - eog
       - evince
       - evince-djvu
@@ -37,13 +47,14 @@ base_packages:
       - file-roller-nautilus
       - fros-gnome
       - gedit
-      - git
-      - glibc-all-langpacks
       - gnome-calculator
       - gnome-color-manager
       - gnome-disk-utility
       - gnome-screenshot
       - gnome-shell
+      - gnome-session
+      - gnome-session-wayland-session
+      - gnome-session-xsession
       - gnome-system-monitor
       - gnome-terminal
       - gnome-terminal-nautilus
@@ -59,19 +70,68 @@ base_packages:
       - gvfs-smb
       - libcanberra-gtk2
       - libproxy-mozjs
-      - libsane-hpaio
       - mousetweaks
       - nautilus
       - nautilus-sendto
-      - pulseaudio-module-x11
-      - pulseaudio-utils
       - qgnomeplatform
       - qt-settings
       - qt5-qtxmlpatterns
-      - rp-pppoe
-      - usb_modeswitch
       - xdg-user-dirs-gtk
-      - zram
+
+kde_packages:
+      - bluedevil
+      - breeze-icon-theme
+      - colord-kde
+      - dolphin
+      - firewall-config
+      - gnome-keyring-pam
+      - kcalc
+      - kcm_systemd
+      - kcolorchooser
+      - kde-gtk-config
+      - kde-partitionmanager
+      - kde-print-manager
+      - kde-settings-pulseaudio
+      - kdegraphics-thumbnailers
+      - kdeplasma-addons
+      - kdialog
+      - kdnssd
+      - keditbookmarks
+      - kfind
+      - khotkeys
+      - kinfocenter
+      - kmousetool
+      - konsole5
+      - kscreen
+      - kscreenlocker
+      - ksshaskpass
+      - ksysguard
+      - kwebkitpart
+      - kwin
+      - kwrite
+      - phonon-qt5-backend-gstreamer
+      - plasma-breeze
+      - plasma-desktop
+      - plasma-desktop-doc
+      - plasma-discover
+      - plasma-drkonqi
+      - plasma-nm-l2tp
+      - plasma-nm-openconnect
+      - plasma-nm-openswan
+      - plasma-nm-openvpn
+      - plasma-nm-pptp
+      - plasma-nm-vpnc
+      - plasma-nm-ssh
+      - plasma-pa
+      - plasma-pk-updates
+      - plasma-user-manager
+      - plasma-workspace
+      - plasma-workspace-geolocation
+      - polkit-kde
+      - sddm
+      - sddm-breeze
+      - sddm-kcm
+      - system-config-language
 
 archive_packages:
       - cabextract

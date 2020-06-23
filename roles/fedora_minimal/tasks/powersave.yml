@@ -123,11 +123,3 @@
     - 'dracut --force --regenerate-all -v'
   when: grub_setup.changed
   become: true
-
-  ############################# REBOOT #######################################
-
-- name: Base distro ready, reboot and continue
-  reboot:
-  when: grub_setup.changed
-  become: true
-  tags: reboot
