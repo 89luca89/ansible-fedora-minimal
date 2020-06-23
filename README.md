@@ -18,7 +18,7 @@ Be sure you have **ssh access to the target machine**.
 Run:
 
 ```sh
-./install.sh MACHINE_IP
+./install.sh MACHINE_IP --all,gnome
 ```
 
 this will launch the ansible playbook. Wait it to finish.
@@ -39,7 +39,7 @@ Available tags are:
 So to run all the tags (ie. on a laptop we want Powersaving Tweaks), we will run:
 
 ```sh
-./install.sh MACHINE_IP --tags base_distro,system_tweaks,powersave
+./install.sh MACHINE_IP --tags all,system_tweaks,powersave,gnome
 ```
 
 More atomic tags are available:
