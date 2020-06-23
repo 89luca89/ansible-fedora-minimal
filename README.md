@@ -74,3 +74,9 @@ With a minimal install both KDE and GNOME ram consumption is absolutely comparab
 tool ( `htop` )
 If we measure with `gnome-system-monitor` it reports a higher RAM usage for gnome and at the same time,
 `ksysguard` reports much lower RAM usage for KDE, both compared to `htop`. 
+
+So keep in mind that:
+
+- `gnome-system-monitor` **over reports ram usage**
+- `ksysguard` **under reports ram usage**
+
