@@ -31,10 +31,20 @@ base_packages:
       - zram
 
 gnome_packages:
+      - NetworkManager-fortisslvpn-gnome
+      - NetworkManager-iodine-gnome
+      - NetworkManager-l2tp-gnome
+      - NetworkManager-libreswan-gnome
+      - NetworkManager-openconnect-gnome
       - NetworkManager-openconnect-gnome
       - NetworkManager-openvpn-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
       - NetworkManager-pptp-gnome
       - NetworkManager-ssh-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-sstp-gnome
+      - NetworkManager-strongswan-gnome
       - NetworkManager-vpnc-gnome
       - avahi
       - baobab
@@ -164,10 +174,6 @@ codecs_packages:
       - libva-vdpau-driver
       - libvdpau-va-gl
 
-process_prioritize:
-      - /usr/bin/mutter
-      - /usr/bin/gnome-shell
-
 global_vars:
       - export MOZ_USE_XINPUT2=1
       - export MOZ_ACCELLERATED=1
@@ -175,10 +181,20 @@ global_vars:
       - export QT_QPA_PLATFORM=xcb
 
 phosh_packages:
+      - NetworkManager-fortisslvpn-gnome
+      - NetworkManager-iodine-gnome
+      - NetworkManager-l2tp-gnome
+      - NetworkManager-libreswan-gnome
+      - NetworkManager-openconnect-gnome
       - NetworkManager-openconnect-gnome
       - NetworkManager-openvpn-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
       - NetworkManager-pptp-gnome
       - NetworkManager-ssh-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-sstp-gnome
+      - NetworkManager-strongswan-gnome
       - NetworkManager-vpnc-gnome
       - avahi
       - baobab
@@ -222,3 +238,58 @@ phosh_packages:
       - phosh
       - squeekboard
       - epiphany
+
+xfce_packages:
+      - NetworkManager-fortisslvpn-gnome
+      - NetworkManager-iodine-gnome
+      - NetworkManager-l2tp-gnome
+      - NetworkManager-libreswan-gnome
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-sstp-gnome
+      - NetworkManager-strongswan-gnome
+      - NetworkManager-vpnc-gnome
+      - Thunar
+      - arc-theme
+      - blueberry
+      - papirus-icon-theme
+      - firewall-config
+      - gtk-xfce-engine
+      - gvfs-afc
+      - gvfs-afp
+      - gvfs-archive
+      - gvfs-fuse
+      - gvfs-gphoto2
+      - gvfs-mtp
+      - gvfs-smb
+      - lightdm-gtk
+      - network-manager-applet
+      - nm-connection-editor
+      - openssh-askpass
+      - thunar-archive-plugin
+      - thunar-media-tags-plugin
+      - thunar-volman
+      - xdg-user-dirs-gtk
+      - xfce4-about
+      - xfce4-appfinder
+      - xfce4-datetime-plugin
+      - xfce4-panel
+      - xfce4-places-plugin
+      - xfce4-power-manager
+      - xfce4-pulseaudio-plugin
+      - xfce4-screenshooter-plugin
+      - xfce4-session
+      - xfce4-settings
+      - xfce4-taskmanager
+      - xfce4-terminal
+      - xfconf
+      - xfdesktop
+      - xfwm4
+      - xfwm4-themes
+      - xscreensaver-base

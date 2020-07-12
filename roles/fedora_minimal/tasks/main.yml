@@ -14,11 +14,11 @@
 
 - name: Performance Tweaks
   include: system_tweaks.yml
-  tags: never, system_tweaks
+  tags: system_tweaks
 
 - name: Powersaving Tweaks
   include: powersave.yml
-  tags: never, powersave
+  tags: powersave
 
 - name: Install gnome packages
   dnf:
@@ -37,6 +37,12 @@
     name: "{{ kde_packages }}"
   become: true
   tags: never,kde
+
+- name: Install xfce packages
+  dnf:
+    name: "{{ xfce_packages }}"
+  become: true
+  tags: never,xfce
 
   ############################# REBOOT #######################################
 

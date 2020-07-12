@@ -29,14 +29,6 @@
       kyber-iosched
   become: true
 
-- name: Responsiveness process performance-tweaks
-  capabilities:
-    path: "{{ item }}"
-    capability: cap_sys_nice=+ep
-    state: present
-  with_items: "{{ process_prioritize }}"
-  become: true
-
 - name: Update the profiles file with personal variables
   lineinfile:
     path: /etc/profile
