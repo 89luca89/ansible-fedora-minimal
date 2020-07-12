@@ -3,6 +3,13 @@
 This ansible playbook aims to setup a minimal, yet fully featured, instance of Fedora Workstation
 starting from a minimal netinstall.
 
+Available DE are:
+
+- gnome
+- kde
+- xfce
+- phosh (EXPERIMENTAL)
+
 ## Installing the base system
 
 - Download Fedora Server [Netinstall ISO](https://getfedora.org/en/server/download/)
@@ -31,9 +38,11 @@ Available tags are:
   - `base_distro`   will install all basic packages  
 - kde (optional)
 - gnome (optional)
-- system_tweaks (optional)
+- xfce (optional)
+- phosh (optional - EXPERIMENTAL)
+- system_tweaks
   - `system_tweaks` will tweak the system for performance  **This has to be explicitely specified to be run**
-- powersave (optional)
+- powersave
   - `powersave`     will tweak the system for laptops and install all powersaving features  **This has to be explicitely specified to be run**
 
 So to run all the tags (ie. on a laptop we want Powersaving Tweaks), we will run:
