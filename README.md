@@ -34,16 +34,13 @@ this will launch the ansible playbook. Wait it to finish.
 
 Available tags are:
 
-- base_distro
-  - `base_distro`   will install all basic packages  
-- kde (optional)
-- gnome (optional)
-- xfce (optional)
-- phosh (optional - EXPERIMENTAL)
-- system_tweaks
-  - `system_tweaks` will tweak the system for performance  **This has to be explicitely specified to be run**
-- powersave
-  - `powersave`     will tweak the system for laptops and install all powersaving features  **This has to be explicitely specified to be run**
+- system_tweaks will tweak the system for performance 
+- base_distro   will install all basic packages
+- powersave (optional)    will tweak the system for laptops and install all powersaving features  **This has to be explicitely specified to be run**
+- kde (optional) **This has to be explicitely specified to be run**
+- gnome (optional) **This has to be explicitely specified to be run**
+- xfce (optional) **This has to be explicitely specified to be run**
+- phosh (optional - EXPERIMENTAL) **This has to be explicitely specified to be run**
 
 So to run all the tags (ie. on a laptop we want Powersaving Tweaks), we will run:
 
@@ -74,7 +71,7 @@ Those will only run the specific task ie. for installing only codecs and rpmfusi
 
 After install:
 
-- `rpm -qa | wc -l` yelds **1248** packages for gnome, **1375** for kde
+- `rpm -qa | wc -l` yelds **1248** packages for gnome, **1375** for kde, **1211** for xfce
 - 111 process after boot (gnome), 87 process after boot (kde)
 - about 600~650mb of ram occupied after boot (both gnome and kde)
 
