@@ -70,6 +70,7 @@ Those will only run the specific task ie. for installing only codecs and rpmfusi
 ![htop](./pics/htop.png)
 ![kde-overview](./pics/kde-overview.png)
 ![kde-htop](./pics/kde-htop.png)
+![xfce-htop](./pics/xfce-htop.png)
 
 After install:
 

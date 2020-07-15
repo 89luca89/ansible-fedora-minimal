@@ -142,44 +142,6 @@ kde_packages:
       - sddm-kcm
       - system-config-language
 
-archive_packages:
-      - cabextract
-      - lzip
-      - p7zip
-      - p7zip-plugins
-      - unzip
-
-codecs_packages:
-      - compat-ffmpeg28
-      - compat-ffmpeg28-devel
-      - ffmpeg
-      - ffmpeg-libs
-      - gstreamer1-libav
-      - gstreamer1-plugins-bad-free
-      - gstreamer1-plugins-bad-freeworld
-      - gstreamer1-plugins-base
-      - gstreamer1-plugins-base-tools
-      - gstreamer1-plugins-good
-      - gstreamer1-plugins-good-extras
-      - gstreamer1-plugins-ugly
-      - gstreamer1-plugins-ugly-free
-      - gstreamer1-svt-av1
-      - gstreamer1-svt-vp9
-      - gstreamer1-vaapi
-      - intel-media-driver
-      - libva-devel
-      - libva-intel-driver
-      - libva-intel-hybrid-driver
-      - libva-utils
-      - libva-vdpau-driver
-      - libvdpau-va-gl
-
-global_vars:
-      - export MOZ_USE_XINPUT2=1
-      - export MOZ_ACCELLERATED=1
-      - export MOZ_WEBRENDER=1
-      - export QT_QPA_PLATFORM=xcb
-
 phosh_packages:
       - NetworkManager-fortisslvpn-gnome
       - NetworkManager-iodine-gnome
@@ -293,3 +255,41 @@ xfce_packages:
       - xfwm4
       - xfwm4-themes
       - xscreensaver-base
+
+archive_packages:
+      - cabextract
+      - lzip
+      - p7zip
+      - p7zip-plugins
+      - unzip
+
+codecs_packages:
+      - compat-ffmpeg28
+      - compat-ffmpeg28-devel
+      - ffmpeg
+      - ffmpeg-libs
+      - gstreamer1-libav
+      - gstreamer1-plugins-bad-free
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-base
+      - gstreamer1-plugins-base-tools
+      - gstreamer1-plugins-good
+      - gstreamer1-plugins-good-extras
+      - gstreamer1-plugins-ugly
+      - gstreamer1-plugins-ugly-free
+      - gstreamer1-svt-av1
+      - gstreamer1-svt-vp9
+      - gstreamer1-vaapi
+      - intel-media-driver
+      - libva-devel
+      - libva-intel-driver
+      - libva-intel-hybrid-driver
+      - libva-utils
+      - libva-vdpau-driver
+      - libvdpau-va-gl
+
+global_vars:
+      - export MOZ_USE_XINPUT2=1
+      - export MOZ_ACCELLERATED=1
+      - export MOZ_WEBRENDER=1
+      - export QT_QPA_PLATFORM=xcb

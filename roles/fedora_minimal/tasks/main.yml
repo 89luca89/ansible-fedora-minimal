@@ -18,7 +18,7 @@
 
 - name: Powersaving Tweaks
   include: powersave.yml
-  tags: powersave
+  tags: never,powersave
 
 - name: Install gnome packages
   dnf:
