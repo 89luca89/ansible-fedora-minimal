@@ -12,7 +12,7 @@ Available DE are:
 
 ## Installing the base system
 
-- Download Fedora Server [Netinstall ISO](https://getfedora.org/en/server/download/)
+- Download Fedora Everything ISO [Everything ISO](https://fedora.mirror.garr.it/fedora/linux/releases/32/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-32-1.6.iso)
 - Prepare Boot Media following [Install Instructions](http://docs.fedoraproject.org/en-US/Fedora/html/Installation_Guide/sect-preparing-boot-media.html)
 - In the installer under Software Selection, select Minimal Install.
 - Create your user and be sure to **mark user as administrator**
