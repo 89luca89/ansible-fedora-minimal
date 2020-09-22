@@ -245,6 +245,7 @@ xfce_packages:
       - xfce4-places-plugin
       - xfce4-power-manager
       - xfce4-pulseaudio-plugin
+      - xfce4-whiskermenu-plugin
       - xfce4-screenshooter-plugin
       - xfce4-session
       - xfce4-settings
