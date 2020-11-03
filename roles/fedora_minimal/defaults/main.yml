@@ -30,41 +30,42 @@ base_packages:
       - usb_modeswitch
       - zram
 
-gnome_packages:
-      - NetworkManager-fortisslvpn-gnome
-      - NetworkManager-iodine-gnome
-      - NetworkManager-l2tp-gnome
-      - NetworkManager-libreswan-gnome
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openvpn-gnome
-      - NetworkManager-openvpn-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-ssh-gnome
-      - NetworkManager-ssh-gnome
-      - NetworkManager-sstp-gnome
-      - NetworkManager-strongswan-gnome
-      - NetworkManager-vpnc-gnome
-      - avahi
+gnome_user_apps:
       - baobab
-      - chrome-gnome-shell
       - eog
       - evince
       - evince-djvu
       - evince-nautilus
       - file-roller
       - file-roller-nautilus
-      - fros-gnome
       - gedit
       - gnome-calculator
-      - gnome-color-manager
       - gnome-disk-utility
       - gnome-screenshot
-      - gnome-shell
+      - nautilus
+      - nautilus-sendto
+
+
+gnome_packages:
+      - NetworkManager-fortisslvpn-gnome
+      - NetworkManager-iodine-gnome
+      - NetworkManager-l2tp-gnome
+      - NetworkManager-libreswan-gnome
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-ssh-gnome
+      - NetworkManager-sstp-gnome
+      - NetworkManager-strongswan-gnome
+      - NetworkManager-vpnc-gnome
+      - avahi
+      - chrome-gnome-shell
+      - fros-gnome
+      - gnome-color-manager
       - gnome-session
       - gnome-session-wayland-session
       - gnome-session-xsession
+      - gnome-shell
       - gnome-system-monitor
       - gnome-terminal
       - gnome-terminal-nautilus
@@ -80,7 +81,6 @@ gnome_packages:
       - gvfs-smb
       - libcanberra-gtk2
       - libproxy-mozjs
-      - mousetweaks
       - nautilus
       - nautilus-sendto
       - qgnomeplatform
@@ -93,32 +93,22 @@ kde_packages:
       - breeze-icon-theme
       - colord-kde
       - dolphin
-      - firewall-config
       - gnome-keyring-pam
-      - kcalc
       - kcm_systemd
-      - kcolorchooser
       - kde-gtk-config
-      - kde-partitionmanager
       - kde-print-manager
       - kde-settings-pulseaudio
       - kdegraphics-thumbnailers
       - kdeplasma-addons
       - kdialog
       - kdnssd
-      - keditbookmarks
       - kfind
-      - khotkeys
       - kinfocenter
-      - kmousetool
       - konsole5
       - kscreen
       - kscreenlocker
-      - ksshaskpass
-      - ksysguard
       - kwebkitpart
       - kwin
-      - kwrite
       - phonon-qt5-backend-gstreamer
       - plasma-breeze
       - plasma-desktop
@@ -129,8 +119,8 @@ kde_packages:
       - plasma-nm-openswan
       - plasma-nm-openvpn
       - plasma-nm-pptp
-      - plasma-nm-vpnc
       - plasma-nm-ssh
+      - plasma-nm-vpnc
       - plasma-pa
       - plasma-pk-updates
       - plasma-user-manager
@@ -207,21 +197,14 @@ xfce_packages:
       - NetworkManager-l2tp-gnome
       - NetworkManager-libreswan-gnome
       - NetworkManager-openconnect-gnome
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openvpn-gnome
       - NetworkManager-openvpn-gnome
       - NetworkManager-pptp-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-ssh-gnome
       - NetworkManager-ssh-gnome
       - NetworkManager-sstp-gnome
       - NetworkManager-strongswan-gnome
       - NetworkManager-vpnc-gnome
-      - Thunar
       - arc-theme
       - blueberry
-      - papirus-icon-theme
-      - firewall-config
       - gtk-xfce-engine
       - gvfs-afc
       - gvfs-afp
@@ -234,9 +217,8 @@ xfce_packages:
       - network-manager-applet
       - nm-connection-editor
       - openssh-askpass
-      - thunar-archive-plugin
-      - thunar-media-tags-plugin
-      - thunar-volman
+      - papirus-icon-theme
+      - thunar
       - xdg-user-dirs-gtk
       - xfce4-about
       - xfce4-appfinder
@@ -245,12 +227,12 @@ xfce_packages:
       - xfce4-places-plugin
       - xfce4-power-manager
       - xfce4-pulseaudio-plugin
-      - xfce4-whiskermenu-plugin
       - xfce4-screenshooter-plugin
       - xfce4-session
       - xfce4-settings
       - xfce4-taskmanager
       - xfce4-terminal
+      - xfce4-whiskermenu-plugin
       - xfconf
       - xfdesktop
       - xfwm4

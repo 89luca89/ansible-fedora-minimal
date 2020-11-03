@@ -26,6 +26,12 @@
   become: true
   tags: never,gnome
 
+- name: Install gnome apps
+  dnf:
+    name: "{{ gnome_user_apps }}"
+  become: true
+  tags: never,gnome,knome,gnome_apps
+
 - name: Install phosh packages
   dnf:
     name: "{{ phosh_packages }}"
