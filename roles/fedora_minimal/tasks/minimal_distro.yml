@@ -8,14 +8,6 @@
   become: true
   tags: base_packages
 
-- name: zRam Swap Enable
-  systemd:
-    name: zram-swap
-    state: started
-    enabled: true
-    daemon_reload: true
-  become: true
-  tags: base_packages
 
 - name: Set graphical target
   command: |

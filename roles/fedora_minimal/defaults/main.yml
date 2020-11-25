@@ -251,6 +251,7 @@ xfce_packages:
       - xfce4-settings
       - xfce4-taskmanager
       - xfce4-terminal
+      - xfce4-notifyd
       - xfconf
       - xfdesktop
       - xfwm4
