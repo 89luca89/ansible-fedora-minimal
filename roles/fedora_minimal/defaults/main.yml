@@ -230,6 +230,7 @@ xfce_packages:
       - xfce4-screenshooter-plugin
       - xfce4-session
       - xfce4-settings
+      - xfce4-volumed
       - xfce4-taskmanager
       - xfce4-terminal
       - xfce4-notifyd
