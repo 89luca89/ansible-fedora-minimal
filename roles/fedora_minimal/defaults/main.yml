@@ -219,6 +219,9 @@ xfce_packages:
       - openssh-askpass
       - papirus-icon-theme
       - thunar
+      - thunar-archive-plugin
+      - thunar-media-tags-plugin
+      - thunar-vcs-plugin thunar-volman
       - xdg-user-dirs-gtk
       - xfce4-about
       - xfce4-appfinder
