@@ -8,7 +8,6 @@
   become: true
   tags: base_packages
 
-
 - name: Set graphical target
   command: |
     systemctl set-default graphical.target

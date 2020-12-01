@@ -14,12 +14,14 @@ base_packages:
       - NetworkManager-adsl
       - NetworkManager-config-connectivity-fedora
       - NetworkManager-ppp
+      - NetworkManager-wifi
       - adwaita-gtk2-theme
       - adwaita-qt4
       - adwaita-qt5
       - alsa-plugins-pulseaudio
       - alsa-ucm
       - alsa-utils
+      - bash-completion
       - earlyoom
       - git
       - glibc-all-langpacks
@@ -89,31 +91,46 @@ gnome_packages:
       - xdg-user-dirs-gtk
 
 kde_packages:
+      - ark
       - bluedevil
+      - breeze-gtk
       - breeze-icon-theme
+      - cagibi
       - colord-kde
+      - cups-pk-helper
       - dolphin
+      - glibc-all-langpacks
       - gnome-keyring-pam
+      - gwenview
+      - kate
       - kcm_systemd
       - kde-gtk-config
+      - kde-partitionmanager
       - kde-print-manager
       - kde-settings-pulseaudio
+      - kde-style-breeze
       - kdegraphics-thumbnailers
       - kdeplasma-addons
       - kdialog
       - kdnssd
       - kfind
+      - kgpg
+      - khotkeys
       - kinfocenter
+      - kmenuedit
       - konsole5
       - kscreen
       - kscreenlocker
+      - ksysguard
       - kwebkitpart
       - kwin
+      - pam-kwallet
       - phonon-qt5-backend-gstreamer
       - plasma-breeze
       - plasma-desktop
       - plasma-desktop-doc
       - plasma-drkonqi
+      - plasma-nm
       - plasma-nm-l2tp
       - plasma-nm-openconnect
       - plasma-nm-openswan
@@ -127,9 +144,14 @@ kde_packages:
       - plasma-workspace
       - plasma-workspace-geolocation
       - polkit-kde
+      - qt5-qtbase-gui
+      - qt5-qtdeclarative
       - sddm
       - sddm-breeze
       - sddm-kcm
+      - setroubleshoot
+      - sni-qt
+      - spectacle
       - system-config-language
 
 phosh_packages:
@@ -203,8 +225,8 @@ xfce_packages:
       - NetworkManager-sstp-gnome
       - NetworkManager-strongswan-gnome
       - NetworkManager-vpnc-gnome
-      - arc-theme
       - blueberry
+      - galculator
       - gtk-xfce-engine
       - gvfs-afc
       - gvfs-afp
@@ -214,32 +236,40 @@ xfce_packages:
       - gvfs-mtp
       - gvfs-smb
       - lightdm-gtk
+      - mousepad
       - network-manager-applet
       - nm-connection-editor
       - openssh-askpass
-      - papirus-icon-theme
+      - qt-settings
+      - qt5-qtxmlpatterns
+      - ristretto
       - thunar
       - thunar-archive-plugin
       - thunar-media-tags-plugin
-      - thunar-vcs-plugin thunar-volman
+      - thunar-vcs-plugin
+      - thunar-volman
+      - xfce-polkit
       - xdg-user-dirs-gtk
       - xfce4-about
       - xfce4-appfinder
       - xfce4-datetime-plugin
+      - xfce4-notifyd
       - xfce4-panel
       - xfce4-places-plugin
       - xfce4-power-manager
       - xfce4-pulseaudio-plugin
+      - xfce4-screenshooter
       - xfce4-screenshooter-plugin
       - xfce4-session
       - xfce4-settings
-      - xfce4-volumed
       - xfce4-taskmanager
       - xfce4-terminal
-      - xfce4-notifyd
+      - xfce4-volumed
       - xfce4-whiskermenu-plugin
       - xfconf
+      - xfdashboard
       - xfdesktop
+      - xfsprogs
       - xfwm4
       - xfwm4-themes
       - xscreensaver-base
