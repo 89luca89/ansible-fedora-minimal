@@ -8,33 +8,35 @@
     regexp: tmpfs /tmp tmpfs
     line: tmpfs /tmp tmpfs defaults,lazytime,noatime,nodiratime 0 0
     state: present
-    backup: true
-  become: true
+    backup: yes
+  become: yes
 
 - name: Discard Trim Enable
   systemd:
     name: fstrim.timer
     state: started
-    enabled: true
-    daemon_reload: true
-  become: true
+    enabled: yes
+    daemon_reload: yes
+  become: yes
 
 - name: Load IO Schedulers at boot
   blockinfile:
     path: /etc/modules-load.d/iosched.conf
-    create: true
+    create: yes
     block: |
       bfq
       mq-deadline
       kyber-iosched
-  become: true
+  become: yes
 
-- name: Update the profiles file with personal variables
-  lineinfile:
-    path: /etc/profile
-    regexp: '{{ item }}'
-    line: '{{ item }}'
-    state: present
-    backup: true
-  with_items: "{{ global_vars }}"
-  become: true
+- name: Improve DNF Performances
+  blockinfile:
+    path: /etc/dnf/dnf.conf
+    create: yes
+    block: |
+      deltarpm=true
+      fastestmirror=true
+      max_parallel_downloads={{ ansible_processor_vcpus }}
+  become: yes
+
+...
