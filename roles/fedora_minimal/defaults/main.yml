@@ -32,21 +32,40 @@ base_packages:
       - usb_modeswitch
       - zram
 
-gnome_user_apps:
-      - baobab
-      - eog
-      - evince
-      - evince-djvu
-      - evince-nautilus
-      - file-roller
-      - file-roller-nautilus
-      - gedit
-      - gnome-calculator
-      - gnome-disk-utility
-      - gnome-screenshot
-      - nautilus
-      - nautilus-sendto
+archive_packages:
+      - cabextract
+      - lzip
+      - p7zip
+      - p7zip-plugins
+      - unzip
+      - unrar
 
+codecs_packages:
+      - compat-ffmpeg28
+      - compat-ffmpeg28-devel
+      - egl-utils
+      - egl-wayland
+      - ffmpeg
+      - ffmpeg-libs
+      - gstreamer1-libav
+      - gstreamer1-plugins-bad-free
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-base
+      - gstreamer1-plugins-base-tools
+      - gstreamer1-plugins-good
+      - gstreamer1-plugins-good-extras
+      - gstreamer1-plugins-ugly
+      - gstreamer1-plugins-ugly-free
+      - gstreamer1-svt-av1
+      - gstreamer1-svt-vp9
+      - gstreamer1-vaapi
+      - intel-media-driver
+      - libva-devel
+      - libva-intel-driver
+      - libva-intel-hybrid-driver
+      - libva-utils
+      - libva-vdpau-driver
+      - libvdpau-va-gl
 
 gnome_packages:
       - NetworkManager-fortisslvpn-gnome
@@ -61,9 +80,19 @@ gnome_packages:
       - NetworkManager-strongswan-gnome
       - NetworkManager-vpnc-gnome
       - avahi
-      - chrome-gnome-shell
+      - baobab
+      - eog
+      - evince
+      - evince-djvu
+      - evince-nautilus
+      - file-roller
+      - file-roller-nautilus
       - fros-gnome
+      - gedit
+      - gnome-calculator
       - gnome-color-manager
+      - gnome-disk-utility
+      - gnome-screenshot
       - gnome-session
       - gnome-session-wayland-session
       - gnome-session-xsession
@@ -172,7 +201,6 @@ phosh_packages:
       - NetworkManager-vpnc-gnome
       - avahi
       - baobab
-      - chrome-gnome-shell
       - eog
       - evince
       - evince-djvu
@@ -248,8 +276,8 @@ xfce_packages:
       - thunar-media-tags-plugin
       - thunar-vcs-plugin
       - thunar-volman
-      - xfce-polkit
       - xdg-user-dirs-gtk
+      - xfce-polkit
       - xfce4-about
       - xfce4-appfinder
       - xfce4-datetime-plugin
@@ -273,42 +301,3 @@ xfce_packages:
       - xfwm4
       - xfwm4-themes
       - xscreensaver-base
-
-archive_packages:
-      - cabextract
-      - lzip
-      - p7zip
-      - p7zip-plugins
-      - unzip
-
-codecs_packages:
-      - compat-ffmpeg28
-      - compat-ffmpeg28-devel
-      - ffmpeg
-      - ffmpeg-libs
-      - gstreamer1-libav
-      - gstreamer1-plugins-bad-free
-      - gstreamer1-plugins-bad-freeworld
-      - gstreamer1-plugins-base
-      - gstreamer1-plugins-base-tools
-      - gstreamer1-plugins-good
-      - gstreamer1-plugins-good-extras
-      - gstreamer1-plugins-ugly
-      - gstreamer1-plugins-ugly-free
-      - gstreamer1-svt-av1
-      - gstreamer1-svt-vp9
-      - gstreamer1-vaapi
-      - intel-media-driver
-      - libva-devel
-      - libva-intel-driver
-      - libva-intel-hybrid-driver
-      - libva-utils
-      - libva-vdpau-driver
-      - libvdpau-va-gl
-
-global_vars:
-      - export MOZ_ACCELLERATED=1
-      - export MOZ_USE_XINPUT2=1
-      - export MOZ_WEBRENDER=1
-      - export MOZ_X11_EGL=1
-      - export QT_QPA_PLATFORM=xcb
