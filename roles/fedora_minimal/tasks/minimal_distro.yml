@@ -5,13 +5,7 @@
 - name: Install base distro
   dnf:
     name: "{{ base_packages }}"
-  become: true
-  tags: base_packages
-
-- name: Set graphical target
-  command: |
-    systemctl set-default graphical.target
-  become: true
+  become: yes
   tags: base_packages
 
 - name: Install the rpmfusion and fonts repo packages
@@ -21,19 +15,29 @@
     name:
       - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_facts.distribution_version }}.noarch.rpm
       - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_facts.distribution_version }}.noarch.rpm
-  become: true
+  become: yes
   tags: rpmfusion
 
 - name: Install Programs (Archive Utilities)
   package:
-    state: latest
+    state: present
     name: "{{ archive_packages }}"
-  become: true
-  tags: zip
+  become: yes
+  tags: archives
 
 - name: Install Programs (Media Utilities)
   package:
-    state: latest
+    state: present
     name: "{{ codecs_packages }}"
-  become: true
+  become: yes
   tags: codecs
+
+- name: Set graphical target
+  file:
+    src: /usr/lib/systemd/system/graphical.target
+    dest: /etc/systemd/system/default.target
+    state: link
+  become: yes
+  tags: base_packages
+
+...
