@@ -3,9 +3,10 @@
 #
 
 - name: Update packages
-  command: |
-    dnf update -y
-  become: true
+  dnf:
+    name: "*"
+    state: latest
+  become: yes
   tags: base_distro
 
 - name: Build up base distro
@@ -23,36 +24,32 @@
 - name: Install gnome packages
   dnf:
     name: "{{ gnome_packages }}"
-  become: true
+  become: yes
   tags: never,gnome
-
-- name: Install gnome apps
-  dnf:
-    name: "{{ gnome_user_apps }}"
-  become: true
-  tags: never,gnome,knome,gnome_apps
 
 - name: Install phosh packages
   dnf:
     name: "{{ phosh_packages }}"
-  become: true
+  become: yes
   tags: never,phosh
 
 - name: Install kde packages
   dnf:
     name: "{{ kde_packages }}"
-  become: true
+  become: yes
   tags: never,kde
 
 - name: Install xfce packages
   dnf:
     name: "{{ xfce_packages }}"
-  become: true
+  become: yes
   tags: never,xfce
 
   ############################# REBOOT #######################################
 
 - name: Base distro ready, reboot and continue
   reboot:
-  become: true
+  become: yes
   tags: reboot
+
+...
