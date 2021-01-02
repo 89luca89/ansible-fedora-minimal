@@ -286,6 +286,7 @@ xfce_packages:
       - xfce4-places-plugin
       - xfce4-power-manager
       - xfce4-pulseaudio-plugin
+      - xfce4-screensaver
       - xfce4-screenshooter
       - xfce4-screenshooter-plugin
       - xfce4-session
@@ -300,4 +301,3 @@ xfce_packages:
       - xfsprogs
       - xfwm4
       - xfwm4-themes
-      - xscreensaver-base
