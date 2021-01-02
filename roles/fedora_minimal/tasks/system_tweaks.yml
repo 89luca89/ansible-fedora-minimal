@@ -2,13 +2,38 @@
 # tweaks
 #
 
-- name: Update fstab file with tmpfs /tmp
-  lineinfile:
-    path: /etc/fstab
-    regexp: tmpfs /tmp tmpfs
-    line: tmpfs /tmp tmpfs defaults,lazytime,noatime,nodiratime 0 0
-    state: present
-    backup: yes
+- name: Get mounts from /etc/mtab
+  shell: cat /etc/mtab
+  changed_when: no
+  register: mount_options
+
+- name: Ensure fstab uses noatime
+  mount:
+    path: "{{ item.split(' ')[1] }}"
+    state: mounted
+    fstype: "{{ item.split(' ')[2] }}"
+    src: "{{ item.split(' ')[0] }}"
+    opts: "{{ item.split(' ')[3].split(',') | union(['noatime']) | unique | join(',') }}"
+  with_items: "{{ mount_options.stdout_lines }}"
+  when:
+    - item.split(" ")[1] in  ["/", "/boot", "/home"]
+  become: yes
+
+- name: Get mounts from /etc/mtab
+  shell: cat /etc/mtab
+  changed_when: no
+  register: mount_options
+
+- name: Ensure fstab uses nodiratime
+  mount:
+    path: "{{ item.split(' ')[1] }}"
+    state: mounted
+    fstype: "{{ item.split(' ')[2] }}"
+    src: "{{ item.split(' ')[0] }}"
+    opts: "{{ item.split(' ')[3].split(',') | union(['nodiratime']) | unique | join(',') }}"
+  with_items: "{{ mount_options.stdout_lines }}"
+  when:
+    - item.split(" ")[1] in  ["/", "/boot", "/home"]
   become: yes
 
 - name: Discard Trim Enable
