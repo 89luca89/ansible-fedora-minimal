@@ -104,30 +104,19 @@
 - name: Deploy Grub Flags
   replace:
     path: /etc/default/grub
-    regexp: 'quiet"$'
-    replace: 'quiet nmi_watchdog=0 pcie_aspm.policy=powersupersave pcie_aspm=force drm.debug=0 drm.vblankoffdelay=1 scsi_mod.use_blk_mq=1 mmc_mod.use_blk_mq=1"'
-    backup: yes
-  register: grub_setup
-  become: yes
-
-
-- name: Deploy Grub Flags
-  replace:
-    path: /etc/default/grub
     regexp: '^(GRUB_CMDLINE_LINUX=(?:(?![" ]{{ item.option | regex_escape }}=).)*)(?:[" ]{{ item.option | regex_escape }}=\S+)?(.*")$'
     replace: '\1 {{ item.option }}={{ item.value }}\2'
     backup: true
   with_items:
     - {option: drm.debug, value: 0}
     - {option: drm.vblankoffdelay, value: 1}
-    - {option: mitigations, value: 'off'}
     - {option: mmc_mod.use_blk_mq, value: 1}
     - {option: nmi_watchdog, value: 0}
     - {option: pcie_aspm, value: force}
     - {option: pcie_aspm.policy, value: powersupersave}
     - {option: scsi_mod.use_blk_mq, value: 1}
   register: grub_setup
-  become: true
+  become: yes
 
 - name: Update Grub and Initramfs
   command: '{{ item }}'
