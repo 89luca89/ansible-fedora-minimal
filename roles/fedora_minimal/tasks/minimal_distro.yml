@@ -32,6 +32,15 @@
   become: yes
   tags: codecs
 
+- name: enable earlyoom
+  systemd:
+    name: earlyoom
+    enabled: yes
+    masked: no
+    state: started
+  become: yes
+  tags: base_packages
+
 - name: Set graphical target
   file:
     src: /usr/lib/systemd/system/graphical.target
