@@ -34,32 +34,73 @@ this will launch the ansible playbook. Wait it to finish.
 
 Available tags are:
 
-- system_tweaks will tweak the system for performance 
-- base_distro   will install all basic packages
 - powersave (optional)    will tweak the system for laptops and install all powersaving features  **This has to be explicitely specified to be run**
+- hardening (optional)    will tweak the system for better security  **This has to be explicitely specified to be run**
 - kde (optional) **this has to be explicitely specified to be run**
 - gnome (optional) **this has to be explicitely specified to be run**
 - xfce (optional) **this has to be explicitely specified to be run**
 - phosh (optional - EXPERIMENTAL) **This has to be explicitely specified to be run**
 
-So to run all the tags (ie. on a laptop we want Powersaving Tweaks), we will run:
-
-```sh
-./install.sh MACHINE_IP --tags all,system_tweaks,powersave,GNOME
-```
-
 More atomic tags are available:
 
+- archives
+- base_distro
 - base_packages
 - codecs
-- zip
-- rpmfusion
 - gnome
 - kde
 - phosh
+- rpmfusion
+- system_tweaks
 - xfce
+- zip
 
 Those will only run the specific task ie. for installing only codecs and rpmfusion, etc.
+
+### Running
+
+#### Locally
+
+So to run all the tags (ie. on a laptop we want Powersaving Tweaks), we will run:
+
+```sh
+./install.sh MACHINE_IP --tags all,powersave,hardening,gnome
+```
+
+#### Ansible Pull
+
+It is also possible to use this playbook in ansible-pull mode:
+
+```sh
+ansible-pull -U https://github.com/89luca89/ansible-fedora-minimal -i $(hostname), -c local --tags all,powersave,hardening,gnome --skip-tags reboot -e "ansible_become_pass=$(pass sudo)" main.yml
+```
+
+#### Hardening
+
+It's also possible to specify the hardening tag, this will apply various tweaks to improve system security.
+This work is inspired from:
+
+- https://dev-sec.io/
+- https://www.cisecurity.org/cis-benchmarks/
+- https://www.ssi.gouv.fr/en/guide/configuration-recommendations-of-a-gnulinux-system/
+- https://apps.nsa.gov/iaarchive/library/ia-guidance/security-configuration/operating-systems/guide-to-the-secure-configuration-of-red-hat-enterprise.cfm
+
+This phase will:
+
+- Disable ssh host-based authentication
+- Disable ssh root login
+- Disable coredump storage
+- Mount with noexec,nosuid,nodev as many mountpoints as possible
+- Make /boot and /usr/lib accessible only to root
+- Ensure selinux enforcing
+- Disable root login on any tty
+- Make `su` binary not accesible to non-sudo users
+- Limit max number of concurrent logins per user
+- Stricter file/folder persmissions in /etc
+- Stricter umask (0027)
+- Stricter $HOME user permissions
+- Sysctl kernel and net values hardening
+- Grub kernel flags hardening
 
 ---
 
@@ -85,10 +126,9 @@ To be noted:
 With a minimal install both KDE and GNOME ram consumption is absolutely comparable, if measured with the same
 tool ( `htop` )
 If we measure with `gnome-system-monitor` it reports a higher RAM usage for GNOME and at the same time,
-`ksysguard` reports much lower RAM usage for KDE, both compared to `htop`. 
+`ksysguard` reports much lower RAM usage for KDE, both compared to `htop`.
 
 So keep in mind that:
 
 - `gnome-system-monitor` **over reports ram usage**
 - `ksysguard` **under reports ram usage**
-

@@ -45,6 +45,10 @@
   become: yes
   tags: never,xfce
 
+- name: Hardening Tweaks
+  include: hardening.yml
+  tags: never,hardening
+
   ############################# REBOOT #######################################
 
 - name: Base distro ready, reboot and continue
