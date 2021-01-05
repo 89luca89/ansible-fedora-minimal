@@ -81,7 +81,6 @@ gnome_packages:
       - NetworkManager-vpnc-gnome
       - avahi
       - baobab
-      - eog
       - evince
       - evince-djvu
       - evince-nautilus
@@ -102,6 +101,7 @@ gnome_packages:
       - gnome-terminal-nautilus
       - gnome-themes-extra
       - gnome-tweak-tool
+      - gthumb
       - gvfs-afc
       - gvfs-afp
       - gvfs-archive
@@ -117,6 +117,7 @@ gnome_packages:
       - qgnomeplatform
       - qt-settings
       - qt5-qtxmlpatterns
+      - sushi
       - xdg-user-dirs-gtk
 
 kde_packages:
