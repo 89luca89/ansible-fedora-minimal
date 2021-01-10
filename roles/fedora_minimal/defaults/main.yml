@@ -18,6 +18,7 @@ base_packages:
       - adwaita-gtk2-theme
       - adwaita-qt4
       - adwaita-qt5
+      - alsa-firmware
       - alsa-plugins-pulseaudio
       - alsa-ucm
       - alsa-utils
@@ -229,7 +230,6 @@ phosh_packages:
       - gvfs-smb
       - libcanberra-gtk2
       - libproxy-mozjs
-      - mousetweaks
       - nautilus
       - nautilus-sendto
       - qgnomeplatform
