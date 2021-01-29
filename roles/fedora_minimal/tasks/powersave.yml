@@ -25,7 +25,7 @@
   become: yes
   with_items:
     - dptfxtract.service
-    - powersave.service
+    - powertop.service
     - thermald.service
     - tlp.service
 
