@@ -6,21 +6,28 @@
     state: present
     name:
       - acpi
+      - dptfxtract
       - hdparm
       - lm_sensors
       - msr-tools
       - powertop
+      - thermald
       - tlp
       - tlp-rdw
   become: yes
 
-- name: TLP daemon enable
+- name: daemon enable
   systemd:
-    name: tlp.service
+    name: "{{ item }}"
     state: started
     enabled: yes
     daemon_reload: yes
   become: yes
+  with_items:
+    - dptfxtract.service
+    - powersave.service
+    - thermald.service
+    - tlp.service
 
 - name: Set sysctl variables
   sysctl:
@@ -53,7 +60,7 @@
   lineinfile:
     path: /etc/modprobe.d/i915.conf
     create: yes
-    line: 'options i915 disable_power_well=0 enable_dc=2 enable_psr=1 enable_rc6=7 enable_fbc=1 powersave=1'
+    line: 'options i915 disable_power_well=0 enable_dc=2 enable_psr=1 enable_rc6=7 enable_fbc=1 powersave=1 enable_guc=3 enable_dpcd_backlight=1'
   become: yes
 
 - name: Set Intel HDA driver options
