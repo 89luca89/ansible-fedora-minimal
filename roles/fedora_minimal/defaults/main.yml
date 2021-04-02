@@ -10,13 +10,14 @@ base_packages:
       - "@hardware-support"
       - "@networkmanager-submodules"
       - "@printing"
+      - "@x86-baremetal-tools"
       - ModemManager
       - NetworkManager-adsl
       - NetworkManager-config-connectivity-fedora
       - NetworkManager-ppp
       - NetworkManager-wifi
+      - NetworkManager-team
       - adwaita-gtk2-theme
-      - adwaita-qt4
       - adwaita-qt5
       - alsa-firmware
       - alsa-plugins-pulseaudio
@@ -32,6 +33,8 @@ base_packages:
       - rp-pppoe
       - usb_modeswitch
       - zram
+      - xrdb
+      - xmodmap
 
 archive_packages:
       - cabextract
@@ -74,20 +77,26 @@ gnome_packages:
       - NetworkManager-l2tp-gnome
       - NetworkManager-libreswan-gnome
       - NetworkManager-openconnect-gnome
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
       - NetworkManager-openvpn-gnome
       - NetworkManager-pptp-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-ssh-gnome
       - NetworkManager-ssh-gnome
       - NetworkManager-sstp-gnome
       - NetworkManager-strongswan-gnome
       - NetworkManager-vpnc-gnome
       - avahi
       - baobab
+      - bolt
       - evince
       - evince-djvu
       - evince-nautilus
       - file-roller
       - file-roller-nautilus
       - fros-gnome
+      - gdm
       - gedit
       - gnome-calculator
       - gnome-color-manager
@@ -112,9 +121,7 @@ gnome_packages:
       - gvfs-mtp
       - gvfs-smb
       - libcanberra-gtk2
-      - libproxy-mozjs
       - nautilus
-      - nautilus-sendto
       - qgnomeplatform
       - qt-settings
       - qt5-qtxmlpatterns
@@ -248,8 +255,12 @@ xfce_packages:
       - NetworkManager-l2tp-gnome
       - NetworkManager-libreswan-gnome
       - NetworkManager-openconnect-gnome
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
       - NetworkManager-openvpn-gnome
       - NetworkManager-pptp-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-ssh-gnome
       - NetworkManager-ssh-gnome
       - NetworkManager-sstp-gnome
       - NetworkManager-strongswan-gnome
