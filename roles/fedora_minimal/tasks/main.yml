@@ -27,12 +27,6 @@
   become: yes
   tags: never,gnome
 
-- name: Install phosh packages
-  dnf:
-    name: "{{ phosh_packages }}"
-  become: yes
-  tags: never,phosh
-
 - name: Install kde packages
   dnf:
     name: "{{ kde_packages }}"

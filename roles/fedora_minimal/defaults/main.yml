@@ -15,8 +15,9 @@ base_packages:
       - NetworkManager-adsl
       - NetworkManager-config-connectivity-fedora
       - NetworkManager-ppp
-      - NetworkManager-wifi
       - NetworkManager-team
+      - NetworkManager-wifi
+      - NetworkManager-tui
       - adwaita-gtk2-theme
       - adwaita-qt5
       - alsa-firmware
@@ -32,9 +33,10 @@ base_packages:
       - pulseaudio-utils
       - rp-pppoe
       - usb_modeswitch
-      - zram
-      - xrdb
+      - xgamma
       - xmodmap
+      - xrdb
+      - zram
 
 archive_packages:
       - cabextract
@@ -77,12 +79,8 @@ gnome_packages:
       - NetworkManager-l2tp-gnome
       - NetworkManager-libreswan-gnome
       - NetworkManager-openconnect-gnome
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openvpn-gnome
       - NetworkManager-openvpn-gnome
       - NetworkManager-pptp-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-ssh-gnome
       - NetworkManager-ssh-gnome
       - NetworkManager-sstp-gnome
       - NetworkManager-strongswan-gnome
@@ -90,11 +88,9 @@ gnome_packages:
       - avahi
       - baobab
       - bolt
+      - eog
       - evince
-      - evince-djvu
-      - evince-nautilus
       - file-roller
-      - file-roller-nautilus
       - fros-gnome
       - gdm
       - gedit
@@ -111,7 +107,6 @@ gnome_packages:
       - gnome-terminal-nautilus
       - gnome-themes-extra
       - gnome-tweak-tool
-      - gthumb
       - gvfs-afc
       - gvfs-afp
       - gvfs-archive
@@ -119,9 +114,12 @@ gnome_packages:
       - gvfs-goa
       - gvfs-gphoto2
       - gvfs-mtp
+      - gvfs-nfs
       - gvfs-smb
       - libcanberra-gtk2
       - nautilus
+      - nm-connection-editor
+      - openssh-askpass
       - qgnomeplatform
       - qt-settings
       - qt5-qtxmlpatterns
@@ -177,7 +175,6 @@ kde_packages:
       - plasma-nm-ssh
       - plasma-nm-vpnc
       - plasma-pa
-      - plasma-pk-updates
       - plasma-user-manager
       - plasma-workspace
       - plasma-workspace-geolocation
@@ -192,81 +189,22 @@ kde_packages:
       - spectacle
       - system-config-language
 
-phosh_packages:
-      - NetworkManager-fortisslvpn-gnome
-      - NetworkManager-iodine-gnome
-      - NetworkManager-l2tp-gnome
-      - NetworkManager-libreswan-gnome
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openvpn-gnome
-      - NetworkManager-openvpn-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-ssh-gnome
-      - NetworkManager-ssh-gnome
-      - NetworkManager-sstp-gnome
-      - NetworkManager-strongswan-gnome
-      - NetworkManager-vpnc-gnome
-      - avahi
-      - baobab
-      - eog
-      - evince
-      - evince-djvu
-      - evince-nautilus
-      - file-roller
-      - file-roller-nautilus
-      - fros-gnome
-      - gedit
-      - gnome-calculator
-      - gnome-color-manager
-      - gnome-disk-utility
-      - gnome-screenshot
-      - gnome-system-monitor
-      - gnome-terminal
-      - gnome-terminal-nautilus
-      - gnome-themes-extra
-      - gnome-tweak-tool
-      - gvfs-afc
-      - gvfs-afp
-      - gvfs-archive
-      - gvfs-fuse
-      - gvfs-goa
-      - gvfs-gphoto2
-      - gvfs-mtp
-      - gvfs-smb
-      - libcanberra-gtk2
-      - libproxy-mozjs
-      - nautilus
-      - nautilus-sendto
-      - qgnomeplatform
-      - qt-settings
-      - qt5-qtxmlpatterns
-      - xdg-user-dirs-gtk
-      - feedbackd
-      - phoc
-      - phosh
-      - squeekboard
-      - epiphany
-
 xfce_packages:
       - NetworkManager-fortisslvpn-gnome
       - NetworkManager-iodine-gnome
       - NetworkManager-l2tp-gnome
       - NetworkManager-libreswan-gnome
       - NetworkManager-openconnect-gnome
-      - NetworkManager-openconnect-gnome
-      - NetworkManager-openvpn-gnome
       - NetworkManager-openvpn-gnome
       - NetworkManager-pptp-gnome
-      - NetworkManager-pptp-gnome
-      - NetworkManager-ssh-gnome
       - NetworkManager-ssh-gnome
       - NetworkManager-sstp-gnome
       - NetworkManager-strongswan-gnome
       - NetworkManager-vpnc-gnome
+      - avahi
       - blueberry
       - galculator
+      - gpicview
       - gtk-xfce-engine
       - gvfs-afc
       - gvfs-afp
@@ -274,31 +212,28 @@ xfce_packages:
       - gvfs-fuse
       - gvfs-gphoto2
       - gvfs-mtp
+      - gvfs-nfs
       - gvfs-smb
+      - libcanberra-gtk2
       - lightdm-gtk
       - mousepad
       - network-manager-applet
       - nm-connection-editor
       - openssh-askpass
+      - qgnomeplatform
       - qt-settings
       - qt5-qtxmlpatterns
-      - ristretto
       - thunar
       - thunar-archive-plugin
-      - thunar-media-tags-plugin
-      - thunar-vcs-plugin
       - thunar-volman
       - xdg-user-dirs-gtk
       - xfce-polkit
-      - xfce4-about
-      - xfce4-appfinder
       - xfce4-datetime-plugin
       - xfce4-notifyd
       - xfce4-panel
-      - xfce4-places-plugin
       - xfce4-power-manager
       - xfce4-pulseaudio-plugin
-      - xfce4-screensaver
+      - xscreensaver
       - xfce4-screenshooter
       - xfce4-screenshooter-plugin
       - xfce4-session
@@ -308,7 +243,6 @@ xfce_packages:
       - xfce4-volumed
       - xfce4-whiskermenu-plugin
       - xfconf
-      - xfdashboard
       - xfdesktop
       - xfsprogs
       - xfwm4

@@ -8,11 +8,14 @@ Available DE are:
 - GNOME
 - KDE
 - XFCE
-- phosh (EXPERIMENTAL)
 
 ## Installing the base system
 
-- Download Fedora Everything ISO [Everything ISO](https://fedora.mirror.garr.it/fedora/linux/releases/32/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-32-1.6.iso)
+- Download Fedora Everything ISO [Everything ISO](https://fedora.mirror.garr.it/fedora/linux/releases/33/Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-33-1.6.iso)
+    - TESTED ON:
+        - 32
+        - 33
+        - 34
 - Prepare Boot Media following [Install Instructions](http://docs.fedoraproject.org/en-US/Fedora/html/Installation_Guide/sect-preparing-boot-media.html)
 - In the installer under Software Selection, select Minimal Install.
 - Create your user and be sure to **mark user as administrator**
@@ -39,7 +42,6 @@ Available tags are:
 - kde (optional) **this has to be explicitely specified to be run**
 - gnome (optional) **this has to be explicitely specified to be run**
 - xfce (optional) **this has to be explicitely specified to be run**
-- phosh (optional - EXPERIMENTAL) **This has to be explicitely specified to be run**
 
 More atomic tags are available:
 
@@ -49,7 +51,6 @@ More atomic tags are available:
 - codecs
 - gnome
 - kde
-- phosh
 - rpmfusion
 - system_tweaks
 - xfce
