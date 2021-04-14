@@ -44,7 +44,6 @@ archive_packages:
       - p7zip
       - p7zip-plugins
       - unzip
-      - unrar
 
 codecs_packages:
       - compat-ffmpeg28
@@ -244,6 +243,5 @@ xfce_packages:
       - xfce4-whiskermenu-plugin
       - xfconf
       - xfdesktop
-      - xfsprogs
       - xfwm4
       - xfwm4-themes

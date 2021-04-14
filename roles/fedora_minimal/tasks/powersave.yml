@@ -6,7 +6,6 @@
     state: present
     name:
       - acpi
-      - dptfxtract
       - hdparm
       - lm_sensors
       - msr-tools
@@ -24,7 +23,6 @@
     daemon_reload: yes
   become: yes
   with_items:
-    - dptfxtract.service
     - powertop.service
     - thermald.service
     - tlp.service
