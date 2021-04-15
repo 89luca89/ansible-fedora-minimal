@@ -50,6 +50,7 @@ codecs_packages:
       - compat-ffmpeg28-devel
       - egl-utils
       - egl-wayland
+      - flac
       - ffmpeg
       - ffmpeg-libs
       - gstreamer1-libav
@@ -203,7 +204,7 @@ xfce_packages:
       - avahi
       - blueberry
       - galculator
-      - gpicview
+      - gtk-murrine-engine
       - gtk-xfce-engine
       - gvfs-afc
       - gvfs-afp
@@ -222,17 +223,18 @@ xfce_packages:
       - qgnomeplatform
       - qt-settings
       - qt5-qtxmlpatterns
+      - ristretto
       - thunar
       - thunar-archive-plugin
       - thunar-volman
       - xdg-user-dirs-gtk
       - xfce-polkit
+      - xfce4-battery-plugin
       - xfce4-datetime-plugin
       - xfce4-notifyd
       - xfce4-panel
       - xfce4-power-manager
       - xfce4-pulseaudio-plugin
-      - xscreensaver
       - xfce4-screenshooter
       - xfce4-screenshooter-plugin
       - xfce4-session
@@ -245,3 +247,4 @@ xfce_packages:
       - xfdesktop
       - xfwm4
       - xfwm4-themes
+      - xscreensaver
