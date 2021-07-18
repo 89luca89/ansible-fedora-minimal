@@ -61,6 +61,7 @@
     block: |
       deltarpm=true
       fastestmirror=true
+      install_weak_deps=false
       max_parallel_downloads={{ ansible_processor_vcpus }}
   become: yes
 

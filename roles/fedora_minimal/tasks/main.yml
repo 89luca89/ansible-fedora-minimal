@@ -21,6 +21,18 @@
   include: powersave.yml
   tags: never,powersave
 
+- name: Install xorg base packages
+  dnf:
+    name: "{{ xorg_packages }}"
+  become: yes
+  tags: never,gnome,xfce,lxde,kde
+
+- name: Install gnome base packages
+  dnf:
+    name: "{{ gtk_base_packaged }}"
+  become: yes
+  tags: never,gnome,xfce,lxde
+
 - name: Install gnome packages
   dnf:
     name: "{{ gnome_packages }}"
@@ -38,6 +50,12 @@
     name: "{{ xfce_packages }}"
   become: yes
   tags: never,xfce
+
+- name: Install lxde packages
+  dnf:
+    name: "{{ lxde_packages }}"
+  become: yes
+  tags: never,lxde
 
 - name: Hardening Tweaks
   include: hardening.yml
