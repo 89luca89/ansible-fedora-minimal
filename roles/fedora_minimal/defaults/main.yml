@@ -35,6 +35,8 @@ base_packages:
   - pulseaudio-utils
   - rp-pppoe
   - usb_modeswitch
+  - python3-dnf-plugins-extras-common
+  - python3-dnf-plugins-extras-upgrade
 
 xorg_packages:
   - "@base-x"
@@ -112,6 +114,8 @@ gtk_base_packaged:
   - xdg-user-dirs-gtk
 
 gnome_packages:
+  - enchant
+  - chrome-gnome-shell
   - avahi
   - baobab
   - bolt
