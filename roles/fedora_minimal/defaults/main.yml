@@ -114,18 +114,12 @@ gtk_base_packaged:
   - xdg-user-dirs-gtk
 
 gnome_packages:
-  - enchant
-  - chrome-gnome-shell
   - avahi
-  - baobab
   - bolt
-  - eog
-  - evince
-  - file-roller
+  - chrome-gnome-shell
+  - enchant
   - fros-gnome
   - gdm
-  - gedit
-  - gnome-calculator
   - gnome-color-manager
   - gnome-disk-utility
   - gnome-screenshot
@@ -140,6 +134,7 @@ gnome_packages:
   - gnome-themes-extra
   - gnome-tweak-tool
   - nautilus
+  - nautilus-extensions
   - sushi
 
 xfce_packages:
