@@ -31,12 +31,11 @@ base_packages:
   - libsane-hpaio
   - nm-connection-editor
   - openssh-askpass
-  - pulseaudio-module-x11
   - pulseaudio-utils
   - rp-pppoe
   - usb_modeswitch
   - python3-dnf-plugins-extras-common
-  - python3-dnf-plugins-extras-upgrade
+  - python3-dnf-plugin-system-upgrade
 
 xorg_packages:
   - "@base-x"
