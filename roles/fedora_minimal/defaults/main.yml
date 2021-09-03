@@ -32,6 +32,7 @@ base_packages:
   - nm-connection-editor
   - openssh-askpass
   - pulseaudio-utils
+  - pipewire-utils
   - rp-pppoe
   - usb_modeswitch
   - python3-dnf-plugins-extras-common

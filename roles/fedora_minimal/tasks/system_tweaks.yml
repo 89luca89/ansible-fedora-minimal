@@ -36,6 +36,18 @@
     - item.split(" ")[1] in  ["/", "/boot", "/home"]
   become: yes
 
+- name: Ensure fstab uses discard
+  mount:
+    path: "{{ item.split(' ')[1] }}"
+    state: mounted
+    fstype: "{{ item.split(' ')[2] }}"
+    src: "{{ item.split(' ')[0] }}"
+    opts: "{{ item.split(' ')[3].split(',') | union(['discard']) | unique | join(',') }}"
+  with_items: "{{ mount_options.stdout_lines }}"
+  when:
+    - item.split(" ")[1] in  ["/", "/boot", "/home"]
+  become: yes
+
 - name: Discard Trim Enable
   systemd:
     name: fstrim.timer
