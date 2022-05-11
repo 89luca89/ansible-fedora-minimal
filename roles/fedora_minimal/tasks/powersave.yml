@@ -65,7 +65,7 @@
   lineinfile:
     path: /etc/modprobe.d/snd_hda_intel.conf
     create: yes
-    line: 'options snd_hda_intel power_save_controlle=Y power_save=1'
+    line: 'options snd_hda_intel power_save_controller=Y power_save=1'
   become: yes
 
 - name: Set Intel ETH driver options
